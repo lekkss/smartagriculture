@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package com.lekkss.soilsensor;
+
+option java_multiple_files = true;
+option java_package = "com.lekkss.soilsensor.soilsensorservice";
+option java_outer_classname = "SoilSensorServiceProto";
+
+service SoilSensorService {
+    rpc GetSoilData(GetSoilDataRequest) returns (SoilData);
+    rpc StreamSoilData(StreamSoilDataRequest) returns (stream SoilData);
+}
+
+message GetSoilDataRequest {}
+
+message StreamSoilDataRequest {}
+
+message SoilData {
+    double temperature = 1;
+    double soil_nutrients = 2;
+    double soil_humidity = 3;
+}
