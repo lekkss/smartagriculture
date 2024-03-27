@@ -14,8 +14,8 @@ import com.lekkss.soilsensor.soilsensorservice.*;
 import io.grpc.stub.StreamObserver;
 
 public class SoilSensorServiceImpl extends SoilSensorServiceGrpc.SoilSensorServiceImplBase {
-    private static final String CSV_FILE_PATH = "C:\\Users\\lekkss\\Desktop\\Distributed System\\smartagriculture\\src\\test\\java\\SoilSensor\\soil_sensor_data.csv";
-    private static final long STREAM_INTERVAL_MS = 10000;
+    private static final String CSV_FILE_PATH = "C:\\Users\\lekkss\\Desktop\\Distributed System\\smartagriculture\\src\\main\\java\\SoilSensor\\soil_sensor_data.csv";
+    private static final long STREAM_INTERVAL_MS = 7000;
 
     @Override
     public void getSoilData(GetSoilDataRequest request, StreamObserver<SoilData> responseObserver) {
