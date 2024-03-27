@@ -40,7 +40,7 @@ public class SoilSensorServiceClient {
             @Override
             public void onCompleted() {
                 // Stream completed
-                System.out.println("Stream completed");
+                System.out.println("Soil Sensor Service Streaming completed");
             }
         };
         stub.streamSoilData(StreamSoilDataRequest.newBuilder().build(), responseObserver);
