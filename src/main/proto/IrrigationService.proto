@@ -7,7 +7,7 @@ option java_package = "com.lekkss.irrigation.irrigationservice";
 option java_outer_classname = "IrrigationServiceProto";
 
 
-service Irrigation {
+service IrrigationService {
    
     rpc CheckIrrigationNeeded(stream SoilData) returns (stream IrrigationResult) {}
 }

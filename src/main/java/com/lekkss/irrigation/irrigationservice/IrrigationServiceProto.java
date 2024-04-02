@@ -37,12 +37,12 @@ public final class IrrigationServiceProto {
       "rigation\"-\n\020IrrigationResult\022\031\n\021irrigati" +
       "on_needed\030\001 \001(\010\"N\n\010SoilData\022\023\n\013temperatu" +
       "re\030\001 \001(\001\022\026\n\016soil_nutrients\030\002 \001(\001\022\025\n\rsoil" +
-      "_humidity\030\003 \001(\0012u\n\nIrrigation\022g\n\025CheckIr" +
-      "rigationNeeded\022\037.com.lekkss.irrigation.S" +
-      "oilData\032\'.com.lekkss.irrigation.Irrigati" +
-      "onResult\"\000(\0010\001BC\n\'com.lekkss.irrigation." +
-      "irrigationserviceB\026IrrigationServiceProt" +
-      "oP\001b\006proto3"
+      "_humidity\030\003 \001(\0012|\n\021IrrigationService\022g\n\025" +
+      "CheckIrrigationNeeded\022\037.com.lekkss.irrig" +
+      "ation.SoilData\032\'.com.lekkss.irrigation.I" +
+      "rrigationResult\"\000(\0010\001BC\n\'com.lekkss.irri" +
+      "gation.irrigationserviceB\026IrrigationServ" +
+      "iceProtoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

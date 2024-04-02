@@ -8,11 +8,11 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
     value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: IrrigationService.proto")
 @io.grpc.stub.annotations.GrpcGenerated
-public final class IrrigationGrpc {
+public final class IrrigationServiceGrpc {
 
-  private IrrigationGrpc() {}
+  private IrrigationServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "com.lekkss.irrigation.Irrigation";
+  public static final java.lang.String SERVICE_NAME = "com.lekkss.irrigation.IrrigationService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.lekkss.irrigation.irrigationservice.SoilData,
@@ -26,10 +26,10 @@ public final class IrrigationGrpc {
   public static io.grpc.MethodDescriptor<com.lekkss.irrigation.irrigationservice.SoilData,
       com.lekkss.irrigation.irrigationservice.IrrigationResult> getCheckIrrigationNeededMethod() {
     io.grpc.MethodDescriptor<com.lekkss.irrigation.irrigationservice.SoilData, com.lekkss.irrigation.irrigationservice.IrrigationResult> getCheckIrrigationNeededMethod;
-    if ((getCheckIrrigationNeededMethod = IrrigationGrpc.getCheckIrrigationNeededMethod) == null) {
-      synchronized (IrrigationGrpc.class) {
-        if ((getCheckIrrigationNeededMethod = IrrigationGrpc.getCheckIrrigationNeededMethod) == null) {
-          IrrigationGrpc.getCheckIrrigationNeededMethod = getCheckIrrigationNeededMethod =
+    if ((getCheckIrrigationNeededMethod = IrrigationServiceGrpc.getCheckIrrigationNeededMethod) == null) {
+      synchronized (IrrigationServiceGrpc.class) {
+        if ((getCheckIrrigationNeededMethod = IrrigationServiceGrpc.getCheckIrrigationNeededMethod) == null) {
+          IrrigationServiceGrpc.getCheckIrrigationNeededMethod = getCheckIrrigationNeededMethod =
               io.grpc.MethodDescriptor.<com.lekkss.irrigation.irrigationservice.SoilData, com.lekkss.irrigation.irrigationservice.IrrigationResult>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CheckIrrigationNeeded"))
@@ -38,7 +38,7 @@ public final class IrrigationGrpc {
                   com.lekkss.irrigation.irrigationservice.SoilData.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.lekkss.irrigation.irrigationservice.IrrigationResult.getDefaultInstance()))
-              .setSchemaDescriptor(new IrrigationMethodDescriptorSupplier("CheckIrrigationNeeded"))
+              .setSchemaDescriptor(new IrrigationServiceMethodDescriptorSupplier("CheckIrrigationNeeded"))
               .build();
         }
       }
@@ -49,45 +49,45 @@ public final class IrrigationGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static IrrigationStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<IrrigationStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<IrrigationStub>() {
+  public static IrrigationServiceStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<IrrigationServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IrrigationServiceStub>() {
         @java.lang.Override
-        public IrrigationStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new IrrigationStub(channel, callOptions);
+        public IrrigationServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IrrigationServiceStub(channel, callOptions);
         }
       };
-    return IrrigationStub.newStub(factory, channel);
+    return IrrigationServiceStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static IrrigationBlockingStub newBlockingStub(
+  public static IrrigationServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<IrrigationBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<IrrigationBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<IrrigationServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IrrigationServiceBlockingStub>() {
         @java.lang.Override
-        public IrrigationBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new IrrigationBlockingStub(channel, callOptions);
+        public IrrigationServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IrrigationServiceBlockingStub(channel, callOptions);
         }
       };
-    return IrrigationBlockingStub.newStub(factory, channel);
+    return IrrigationServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static IrrigationFutureStub newFutureStub(
+  public static IrrigationServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<IrrigationFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<IrrigationFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<IrrigationServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IrrigationServiceFutureStub>() {
         @java.lang.Override
-        public IrrigationFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new IrrigationFutureStub(channel, callOptions);
+        public IrrigationServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IrrigationServiceFutureStub(channel, callOptions);
         }
       };
-    return IrrigationFutureStub.newStub(factory, channel);
+    return IrrigationServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -103,30 +103,30 @@ public final class IrrigationGrpc {
   }
 
   /**
-   * Base class for the server implementation of the service Irrigation.
+   * Base class for the server implementation of the service IrrigationService.
    */
-  public static abstract class IrrigationImplBase
+  public static abstract class IrrigationServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return IrrigationGrpc.bindService(this);
+      return IrrigationServiceGrpc.bindService(this);
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Irrigation.
+   * A stub to allow clients to do asynchronous rpc calls to service IrrigationService.
    */
-  public static final class IrrigationStub
-      extends io.grpc.stub.AbstractAsyncStub<IrrigationStub> {
-    private IrrigationStub(
+  public static final class IrrigationServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<IrrigationServiceStub> {
+    private IrrigationServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IrrigationStub build(
+    protected IrrigationServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new IrrigationStub(channel, callOptions);
+      return new IrrigationServiceStub(channel, callOptions);
     }
 
     /**
@@ -139,36 +139,36 @@ public final class IrrigationGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Irrigation.
+   * A stub to allow clients to do synchronous rpc calls to service IrrigationService.
    */
-  public static final class IrrigationBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<IrrigationBlockingStub> {
-    private IrrigationBlockingStub(
+  public static final class IrrigationServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<IrrigationServiceBlockingStub> {
+    private IrrigationServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IrrigationBlockingStub build(
+    protected IrrigationServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new IrrigationBlockingStub(channel, callOptions);
+      return new IrrigationServiceBlockingStub(channel, callOptions);
     }
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Irrigation.
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service IrrigationService.
    */
-  public static final class IrrigationFutureStub
-      extends io.grpc.stub.AbstractFutureStub<IrrigationFutureStub> {
-    private IrrigationFutureStub(
+  public static final class IrrigationServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<IrrigationServiceFutureStub> {
+    private IrrigationServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IrrigationFutureStub build(
+    protected IrrigationServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new IrrigationFutureStub(channel, callOptions);
+      return new IrrigationServiceFutureStub(channel, callOptions);
     }
   }
 
@@ -222,9 +222,9 @@ public final class IrrigationGrpc {
         .build();
   }
 
-  private static abstract class IrrigationBaseDescriptorSupplier
+  private static abstract class IrrigationServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    IrrigationBaseDescriptorSupplier() {}
+    IrrigationServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
@@ -233,21 +233,21 @@ public final class IrrigationGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("Irrigation");
+      return getFileDescriptor().findServiceByName("IrrigationService");
     }
   }
 
-  private static final class IrrigationFileDescriptorSupplier
-      extends IrrigationBaseDescriptorSupplier {
-    IrrigationFileDescriptorSupplier() {}
+  private static final class IrrigationServiceFileDescriptorSupplier
+      extends IrrigationServiceBaseDescriptorSupplier {
+    IrrigationServiceFileDescriptorSupplier() {}
   }
 
-  private static final class IrrigationMethodDescriptorSupplier
-      extends IrrigationBaseDescriptorSupplier
+  private static final class IrrigationServiceMethodDescriptorSupplier
+      extends IrrigationServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final java.lang.String methodName;
 
-    IrrigationMethodDescriptorSupplier(java.lang.String methodName) {
+    IrrigationServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -262,11 +262,11 @@ public final class IrrigationGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (IrrigationGrpc.class) {
+      synchronized (IrrigationServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new IrrigationFileDescriptorSupplier())
+              .setSchemaDescriptor(new IrrigationServiceFileDescriptorSupplier())
               .addMethod(getCheckIrrigationNeededMethod())
               .build();
         }
