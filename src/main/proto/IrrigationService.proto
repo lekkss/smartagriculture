@@ -9,14 +9,14 @@ option java_outer_classname = "IrrigationServiceProto";
 
 service IrrigationService {
    
-    rpc CheckIrrigationNeeded(stream SoilData) returns (stream IrrigationResult) {}
+    rpc CheckIrrigationNeeded(stream IrrigationSoilData) returns (stream IrrigationResult) {}
 }
 
 message IrrigationResult {
     bool irrigation_needed = 1;
 }
 
-message SoilData {
+message IrrigationSoilData {
     double temperature = 1;
     double soil_nutrients = 2;
     double soil_humidity = 3;

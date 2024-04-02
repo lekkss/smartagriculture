@@ -14,7 +14,7 @@ public class IrrigationServiceServer {
         System.out.println("Server started, lisening on port " + port);
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.out.println("Shutting down Soil Sensor Server");
+            System.out.println("Shutting down Irrigation Service Server");
             try {
                 IrrigationServiceServer.this.stop();
             } catch (InterruptedException e) {

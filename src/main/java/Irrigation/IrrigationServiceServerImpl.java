@@ -6,10 +6,10 @@ import io.grpc.stub.StreamObserver;
 
 public class IrrigationServiceServerImpl extends IrrigationServiceGrpc.IrrigationServiceImplBase {
     @Override
-    public StreamObserver<SoilData> checkIrrigationNeeded(StreamObserver<IrrigationResult> responseObserver) {
-        return new StreamObserver<SoilData>() {
+    public StreamObserver<IrrigationSoilData> checkIrrigationNeeded(StreamObserver<IrrigationResult> responseObserver) {
+        return new StreamObserver<IrrigationSoilData>() {
             @Override
-            public void onNext(SoilData soildata) {
+            public void onNext(IrrigationSoilData soildata) {
                 // check if irrigation is needed
                 boolean irrigationNeeded = checkIrrigationNeededLogic(soildata);
                 IrrigationResult result = IrrigationResult.newBuilder().setIrrigationNeeded(irrigationNeeded).build();
@@ -29,7 +29,7 @@ public class IrrigationServiceServerImpl extends IrrigationServiceGrpc.Irrigatio
             }
 
             // Example logic to check if irrigation is needed based on soil data
-            private boolean checkIrrigationNeededLogic(SoilData soilData) {
+            private boolean checkIrrigationNeededLogic(IrrigationSoilData soilData) {
                 // Implement your logic here
                 // For example, check soil moisture level, temperature, etc.
                 // Return true if irrigation is needed, false otherwise

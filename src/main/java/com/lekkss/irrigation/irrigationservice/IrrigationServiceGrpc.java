@@ -15,27 +15,27 @@ public final class IrrigationServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "com.lekkss.irrigation.IrrigationService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.lekkss.irrigation.irrigationservice.SoilData,
+  private static volatile io.grpc.MethodDescriptor<com.lekkss.irrigation.irrigationservice.IrrigationSoilData,
       com.lekkss.irrigation.irrigationservice.IrrigationResult> getCheckIrrigationNeededMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CheckIrrigationNeeded",
-      requestType = com.lekkss.irrigation.irrigationservice.SoilData.class,
+      requestType = com.lekkss.irrigation.irrigationservice.IrrigationSoilData.class,
       responseType = com.lekkss.irrigation.irrigationservice.IrrigationResult.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-  public static io.grpc.MethodDescriptor<com.lekkss.irrigation.irrigationservice.SoilData,
+  public static io.grpc.MethodDescriptor<com.lekkss.irrigation.irrigationservice.IrrigationSoilData,
       com.lekkss.irrigation.irrigationservice.IrrigationResult> getCheckIrrigationNeededMethod() {
-    io.grpc.MethodDescriptor<com.lekkss.irrigation.irrigationservice.SoilData, com.lekkss.irrigation.irrigationservice.IrrigationResult> getCheckIrrigationNeededMethod;
+    io.grpc.MethodDescriptor<com.lekkss.irrigation.irrigationservice.IrrigationSoilData, com.lekkss.irrigation.irrigationservice.IrrigationResult> getCheckIrrigationNeededMethod;
     if ((getCheckIrrigationNeededMethod = IrrigationServiceGrpc.getCheckIrrigationNeededMethod) == null) {
       synchronized (IrrigationServiceGrpc.class) {
         if ((getCheckIrrigationNeededMethod = IrrigationServiceGrpc.getCheckIrrigationNeededMethod) == null) {
           IrrigationServiceGrpc.getCheckIrrigationNeededMethod = getCheckIrrigationNeededMethod =
-              io.grpc.MethodDescriptor.<com.lekkss.irrigation.irrigationservice.SoilData, com.lekkss.irrigation.irrigationservice.IrrigationResult>newBuilder()
+              io.grpc.MethodDescriptor.<com.lekkss.irrigation.irrigationservice.IrrigationSoilData, com.lekkss.irrigation.irrigationservice.IrrigationResult>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CheckIrrigationNeeded"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.lekkss.irrigation.irrigationservice.SoilData.getDefaultInstance()))
+                  com.lekkss.irrigation.irrigationservice.IrrigationSoilData.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.lekkss.irrigation.irrigationservice.IrrigationResult.getDefaultInstance()))
               .setSchemaDescriptor(new IrrigationServiceMethodDescriptorSupplier("CheckIrrigationNeeded"))
@@ -96,7 +96,7 @@ public final class IrrigationServiceGrpc {
 
     /**
      */
-    default io.grpc.stub.StreamObserver<com.lekkss.irrigation.irrigationservice.SoilData> checkIrrigationNeeded(
+    default io.grpc.stub.StreamObserver<com.lekkss.irrigation.irrigationservice.IrrigationSoilData> checkIrrigationNeeded(
         io.grpc.stub.StreamObserver<com.lekkss.irrigation.irrigationservice.IrrigationResult> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getCheckIrrigationNeededMethod(), responseObserver);
     }
@@ -131,7 +131,7 @@ public final class IrrigationServiceGrpc {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.lekkss.irrigation.irrigationservice.SoilData> checkIrrigationNeeded(
+    public io.grpc.stub.StreamObserver<com.lekkss.irrigation.irrigationservice.IrrigationSoilData> checkIrrigationNeeded(
         io.grpc.stub.StreamObserver<com.lekkss.irrigation.irrigationservice.IrrigationResult> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getCheckIrrigationNeededMethod(), getCallOptions()), responseObserver);
@@ -216,7 +216,7 @@ public final class IrrigationServiceGrpc {
           getCheckIrrigationNeededMethod(),
           io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
             new MethodHandlers<
-              com.lekkss.irrigation.irrigationservice.SoilData,
+              com.lekkss.irrigation.irrigationservice.IrrigationSoilData,
               com.lekkss.irrigation.irrigationservice.IrrigationResult>(
                 service, METHODID_CHECK_IRRIGATION_NEEDED)))
         .build();

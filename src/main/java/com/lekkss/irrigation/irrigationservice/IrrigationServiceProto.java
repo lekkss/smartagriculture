@@ -20,10 +20,10 @@ public final class IrrigationServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_lekkss_irrigation_IrrigationResult_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_lekkss_irrigation_SoilData_descriptor;
+    internal_static_com_lekkss_irrigation_IrrigationSoilData_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_lekkss_irrigation_SoilData_fieldAccessorTable;
+      internal_static_com_lekkss_irrigation_IrrigationSoilData_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35,14 +35,14 @@ public final class IrrigationServiceProto {
     java.lang.String[] descriptorData = {
       "\n\027IrrigationService.proto\022\025com.lekkss.ir" +
       "rigation\"-\n\020IrrigationResult\022\031\n\021irrigati" +
-      "on_needed\030\001 \001(\010\"N\n\010SoilData\022\023\n\013temperatu" +
-      "re\030\001 \001(\001\022\026\n\016soil_nutrients\030\002 \001(\001\022\025\n\rsoil" +
-      "_humidity\030\003 \001(\0012|\n\021IrrigationService\022g\n\025" +
-      "CheckIrrigationNeeded\022\037.com.lekkss.irrig" +
-      "ation.SoilData\032\'.com.lekkss.irrigation.I" +
-      "rrigationResult\"\000(\0010\001BC\n\'com.lekkss.irri" +
-      "gation.irrigationserviceB\026IrrigationServ" +
-      "iceProtoP\001b\006proto3"
+      "on_needed\030\001 \001(\010\"X\n\022IrrigationSoilData\022\023\n" +
+      "\013temperature\030\001 \001(\001\022\026\n\016soil_nutrients\030\002 \001" +
+      "(\001\022\025\n\rsoil_humidity\030\003 \001(\0012\206\001\n\021Irrigation" +
+      "Service\022q\n\025CheckIrrigationNeeded\022).com.l" +
+      "ekkss.irrigation.IrrigationSoilData\032\'.co" +
+      "m.lekkss.irrigation.IrrigationResult\"\000(\001" +
+      "0\001BC\n\'com.lekkss.irrigation.irrigationse" +
+      "rviceB\026IrrigationServiceProtoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -62,11 +62,11 @@ public final class IrrigationServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_lekkss_irrigation_IrrigationResult_descriptor,
         new java.lang.String[] { "IrrigationNeeded", });
-    internal_static_com_lekkss_irrigation_SoilData_descriptor =
+    internal_static_com_lekkss_irrigation_IrrigationSoilData_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_lekkss_irrigation_SoilData_fieldAccessorTable = new
+    internal_static_com_lekkss_irrigation_IrrigationSoilData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_lekkss_irrigation_SoilData_descriptor,
+        internal_static_com_lekkss_irrigation_IrrigationSoilData_descriptor,
         new java.lang.String[] { "Temperature", "SoilNutrients", "SoilHumidity", });
   }
 

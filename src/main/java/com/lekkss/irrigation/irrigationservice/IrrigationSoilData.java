@@ -4,18 +4,18 @@
 package com.lekkss.irrigation.irrigationservice;
 
 /**
- * Protobuf type {@code com.lekkss.irrigation.SoilData}
+ * Protobuf type {@code com.lekkss.irrigation.IrrigationSoilData}
  */
-public  final class SoilData extends
+public  final class IrrigationSoilData extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.lekkss.irrigation.SoilData)
-    SoilDataOrBuilder {
+    // @@protoc_insertion_point(message_implements:com.lekkss.irrigation.IrrigationSoilData)
+    IrrigationSoilDataOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use SoilData.newBuilder() to construct.
-  private SoilData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use IrrigationSoilData.newBuilder() to construct.
+  private IrrigationSoilData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private SoilData() {
+  private IrrigationSoilData() {
     temperature_ = 0D;
     soilNutrients_ = 0D;
     soilHumidity_ = 0D;
@@ -26,7 +26,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private SoilData(
+  private IrrigationSoilData(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -81,15 +81,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.lekkss.irrigation.irrigationservice.IrrigationServiceProto.internal_static_com_lekkss_irrigation_SoilData_descriptor;
+    return com.lekkss.irrigation.irrigationservice.IrrigationServiceProto.internal_static_com_lekkss_irrigation_IrrigationSoilData_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.lekkss.irrigation.irrigationservice.IrrigationServiceProto.internal_static_com_lekkss_irrigation_SoilData_fieldAccessorTable
+    return com.lekkss.irrigation.irrigationservice.IrrigationServiceProto.internal_static_com_lekkss_irrigation_IrrigationSoilData_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.lekkss.irrigation.irrigationservice.SoilData.class, com.lekkss.irrigation.irrigationservice.SoilData.Builder.class);
+            com.lekkss.irrigation.irrigationservice.IrrigationSoilData.class, com.lekkss.irrigation.irrigationservice.IrrigationSoilData.Builder.class);
   }
 
   public static final int TEMPERATURE_FIELD_NUMBER = 1;
@@ -173,10 +173,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.lekkss.irrigation.irrigationservice.SoilData)) {
+    if (!(obj instanceof com.lekkss.irrigation.irrigationservice.IrrigationSoilData)) {
       return super.equals(obj);
     }
-    com.lekkss.irrigation.irrigationservice.SoilData other = (com.lekkss.irrigation.irrigationservice.SoilData) obj;
+    com.lekkss.irrigation.irrigationservice.IrrigationSoilData other = (com.lekkss.irrigation.irrigationservice.IrrigationSoilData) obj;
 
     boolean result = true;
     result = result && (
@@ -216,69 +216,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.lekkss.irrigation.irrigationservice.SoilData parseFrom(
+  public static com.lekkss.irrigation.irrigationservice.IrrigationSoilData parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.lekkss.irrigation.irrigationservice.SoilData parseFrom(
+  public static com.lekkss.irrigation.irrigationservice.IrrigationSoilData parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.lekkss.irrigation.irrigationservice.SoilData parseFrom(
+  public static com.lekkss.irrigation.irrigationservice.IrrigationSoilData parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.lekkss.irrigation.irrigationservice.SoilData parseFrom(
+  public static com.lekkss.irrigation.irrigationservice.IrrigationSoilData parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.lekkss.irrigation.irrigationservice.SoilData parseFrom(byte[] data)
+  public static com.lekkss.irrigation.irrigationservice.IrrigationSoilData parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.lekkss.irrigation.irrigationservice.SoilData parseFrom(
+  public static com.lekkss.irrigation.irrigationservice.IrrigationSoilData parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.lekkss.irrigation.irrigationservice.SoilData parseFrom(java.io.InputStream input)
+  public static com.lekkss.irrigation.irrigationservice.IrrigationSoilData parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.lekkss.irrigation.irrigationservice.SoilData parseFrom(
+  public static com.lekkss.irrigation.irrigationservice.IrrigationSoilData parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.lekkss.irrigation.irrigationservice.SoilData parseDelimitedFrom(java.io.InputStream input)
+  public static com.lekkss.irrigation.irrigationservice.IrrigationSoilData parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.lekkss.irrigation.irrigationservice.SoilData parseDelimitedFrom(
+  public static com.lekkss.irrigation.irrigationservice.IrrigationSoilData parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.lekkss.irrigation.irrigationservice.SoilData parseFrom(
+  public static com.lekkss.irrigation.irrigationservice.IrrigationSoilData parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.lekkss.irrigation.irrigationservice.SoilData parseFrom(
+  public static com.lekkss.irrigation.irrigationservice.IrrigationSoilData parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -291,7 +291,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.lekkss.irrigation.irrigationservice.SoilData prototype) {
+  public static Builder newBuilder(com.lekkss.irrigation.irrigationservice.IrrigationSoilData prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -307,26 +307,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.lekkss.irrigation.SoilData}
+   * Protobuf type {@code com.lekkss.irrigation.IrrigationSoilData}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.lekkss.irrigation.SoilData)
-      com.lekkss.irrigation.irrigationservice.SoilDataOrBuilder {
+      // @@protoc_insertion_point(builder_implements:com.lekkss.irrigation.IrrigationSoilData)
+      com.lekkss.irrigation.irrigationservice.IrrigationSoilDataOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.lekkss.irrigation.irrigationservice.IrrigationServiceProto.internal_static_com_lekkss_irrigation_SoilData_descriptor;
+      return com.lekkss.irrigation.irrigationservice.IrrigationServiceProto.internal_static_com_lekkss_irrigation_IrrigationSoilData_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.lekkss.irrigation.irrigationservice.IrrigationServiceProto.internal_static_com_lekkss_irrigation_SoilData_fieldAccessorTable
+      return com.lekkss.irrigation.irrigationservice.IrrigationServiceProto.internal_static_com_lekkss_irrigation_IrrigationSoilData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.lekkss.irrigation.irrigationservice.SoilData.class, com.lekkss.irrigation.irrigationservice.SoilData.Builder.class);
+              com.lekkss.irrigation.irrigationservice.IrrigationSoilData.class, com.lekkss.irrigation.irrigationservice.IrrigationSoilData.Builder.class);
     }
 
-    // Construct using com.lekkss.irrigation.irrigationservice.SoilData.newBuilder()
+    // Construct using com.lekkss.irrigation.irrigationservice.IrrigationSoilData.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -356,17 +356,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.lekkss.irrigation.irrigationservice.IrrigationServiceProto.internal_static_com_lekkss_irrigation_SoilData_descriptor;
+      return com.lekkss.irrigation.irrigationservice.IrrigationServiceProto.internal_static_com_lekkss_irrigation_IrrigationSoilData_descriptor;
     }
 
     @java.lang.Override
-    public com.lekkss.irrigation.irrigationservice.SoilData getDefaultInstanceForType() {
-      return com.lekkss.irrigation.irrigationservice.SoilData.getDefaultInstance();
+    public com.lekkss.irrigation.irrigationservice.IrrigationSoilData getDefaultInstanceForType() {
+      return com.lekkss.irrigation.irrigationservice.IrrigationSoilData.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.lekkss.irrigation.irrigationservice.SoilData build() {
-      com.lekkss.irrigation.irrigationservice.SoilData result = buildPartial();
+    public com.lekkss.irrigation.irrigationservice.IrrigationSoilData build() {
+      com.lekkss.irrigation.irrigationservice.IrrigationSoilData result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -374,8 +374,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.lekkss.irrigation.irrigationservice.SoilData buildPartial() {
-      com.lekkss.irrigation.irrigationservice.SoilData result = new com.lekkss.irrigation.irrigationservice.SoilData(this);
+    public com.lekkss.irrigation.irrigationservice.IrrigationSoilData buildPartial() {
+      com.lekkss.irrigation.irrigationservice.IrrigationSoilData result = new com.lekkss.irrigation.irrigationservice.IrrigationSoilData(this);
       result.temperature_ = temperature_;
       result.soilNutrients_ = soilNutrients_;
       result.soilHumidity_ = soilHumidity_;
@@ -417,16 +417,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.lekkss.irrigation.irrigationservice.SoilData) {
-        return mergeFrom((com.lekkss.irrigation.irrigationservice.SoilData)other);
+      if (other instanceof com.lekkss.irrigation.irrigationservice.IrrigationSoilData) {
+        return mergeFrom((com.lekkss.irrigation.irrigationservice.IrrigationSoilData)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.lekkss.irrigation.irrigationservice.SoilData other) {
-      if (other == com.lekkss.irrigation.irrigationservice.SoilData.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.lekkss.irrigation.irrigationservice.IrrigationSoilData other) {
+      if (other == com.lekkss.irrigation.irrigationservice.IrrigationSoilData.getDefaultInstance()) return this;
       if (other.getTemperature() != 0D) {
         setTemperature(other.getTemperature());
       }
@@ -451,11 +451,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.lekkss.irrigation.irrigationservice.SoilData parsedMessage = null;
+      com.lekkss.irrigation.irrigationservice.IrrigationSoilData parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.lekkss.irrigation.irrigationservice.SoilData) e.getUnfinishedMessage();
+        parsedMessage = (com.lekkss.irrigation.irrigationservice.IrrigationSoilData) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -555,41 +555,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.lekkss.irrigation.SoilData)
+    // @@protoc_insertion_point(builder_scope:com.lekkss.irrigation.IrrigationSoilData)
   }
 
-  // @@protoc_insertion_point(class_scope:com.lekkss.irrigation.SoilData)
-  private static final com.lekkss.irrigation.irrigationservice.SoilData DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:com.lekkss.irrigation.IrrigationSoilData)
+  private static final com.lekkss.irrigation.irrigationservice.IrrigationSoilData DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.lekkss.irrigation.irrigationservice.SoilData();
+    DEFAULT_INSTANCE = new com.lekkss.irrigation.irrigationservice.IrrigationSoilData();
   }
 
-  public static com.lekkss.irrigation.irrigationservice.SoilData getDefaultInstance() {
+  public static com.lekkss.irrigation.irrigationservice.IrrigationSoilData getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SoilData>
-      PARSER = new com.google.protobuf.AbstractParser<SoilData>() {
+  private static final com.google.protobuf.Parser<IrrigationSoilData>
+      PARSER = new com.google.protobuf.AbstractParser<IrrigationSoilData>() {
     @java.lang.Override
-    public SoilData parsePartialFrom(
+    public IrrigationSoilData parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new SoilData(input, extensionRegistry);
+      return new IrrigationSoilData(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<SoilData> parser() {
+  public static com.google.protobuf.Parser<IrrigationSoilData> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<SoilData> getParserForType() {
+  public com.google.protobuf.Parser<IrrigationSoilData> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.lekkss.irrigation.irrigationservice.SoilData getDefaultInstanceForType() {
+  public com.lekkss.irrigation.irrigationservice.IrrigationSoilData getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

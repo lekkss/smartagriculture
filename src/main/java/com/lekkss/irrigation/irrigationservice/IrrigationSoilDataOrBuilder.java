@@ -3,8 +3,8 @@
 
 package com.lekkss.irrigation.irrigationservice;
 
-public interface SoilDataOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.lekkss.irrigation.SoilData)
+public interface IrrigationSoilDataOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:com.lekkss.irrigation.IrrigationSoilData)
     com.google.protobuf.MessageOrBuilder {
 
   /**
