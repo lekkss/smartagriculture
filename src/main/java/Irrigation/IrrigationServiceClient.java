@@ -1,6 +1,12 @@
 package Irrigation;
 
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
 
 import com.lekkss.irrigation.irrigationservice.*;
 import io.grpc.ManagedChannel;
@@ -16,41 +22,50 @@ public class IrrigationServiceClient {
         this.stub = IrrigationServiceGrpc.newStub(channel);
     }
 
-    public void checkIrrigation() {
-        StreamObserver<IrrigationSoilData> requestObserver = stub
-                .checkIrrigationNeeded(new StreamObserver<IrrigationResult>() {
-                    @Override
-                    public void onNext(IrrigationResult irrigationResult) {
-                        if (irrigationResult.getIrrigationNeeded()) {
-                            System.out.println("Irrigation is Needed");
-                        } else {
-                            System.out.println("Irrigation not needed");
+    public void checkIrrigation(String filePath) throws InterruptedException {
+        try (FileReader reader = new FileReader(filePath);
+                CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader())) {
+
+            StreamObserver<IrrigationSoilData> requestObserver = stub
+                    .checkIrrigationNeeded(new StreamObserver<IrrigationResult>() {
+                        @Override
+                        public void onNext(IrrigationResult irrigationResult) {
+                            if (irrigationResult.getIrrigationNeeded()) {
+                                System.out.println("Irrigation is Needed");
+                            } else {
+                                System.out.println("Irrigation not needed");
+                            }
                         }
-                    }
 
-                    @Override
-                    public void onError(Throwable throwable) {
-                        System.out.println("Error: " + throwable.getMessage());
-                    }
+                        @Override
+                        public void onError(Throwable throwable) {
+                            System.out.println("Error: " + throwable.getMessage());
+                        }
 
-                    @Override
-                    public void onCompleted() {
-                        System.out.println("Stream completed");
-                    }
-                });
-        // Simulate sending soil sensor data to the server
-        // Replace this with actual soil sensor data streaming logic
-        for (int i = 0; i < 1000; i++) {
-            IrrigationSoilData soilData = IrrigationSoilData.newBuilder()
-                    .setTemperature(25.0 + i)
-                    .setSoilNutrients(0.6 + i)
-                    .setSoilHumidity(0.4 + i)
-                    .build();
-            requestObserver.onNext(soilData);
+                        @Override
+                        public void onCompleted() {
+                            System.out.println("Stream Irrigation completed");
+                        }
+                    });
+
+            for (CSVRecord record : csvParser) {
+                float temperature = Float.parseFloat(record.get("Temperature (°C)"));
+                float soilNutrients = Float.parseFloat(record.get("Soil Nutrients"));
+                float soilHumidity = Float.parseFloat(record.get("Soil Humidity"));
+
+                IrrigationSoilData soilData = IrrigationSoilData.newBuilder()
+                        .setTemperature(temperature)
+                        .setSoilNutrients(soilNutrients)
+                        .setSoilHumidity(soilHumidity)
+                        .build();
+                TimeUnit.MILLISECONDS.sleep(7000);
+                requestObserver.onNext(soilData);
+            }
+
+            requestObserver.onCompleted();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
-        // Indicate the end of streaming
-        requestObserver.onCompleted();
     }
 
     public void shutdown() {
@@ -61,10 +76,11 @@ public class IrrigationServiceClient {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         IrrigationServiceClient client = new IrrigationServiceClient("localhost", 5051);
         try {
-            client.checkIrrigation();
+            client.checkIrrigation(
+                    "C:\\Users\\lekkss\\Desktop\\Distributed System\\smartagriculture\\src\\main\\java\\SoilSensor\\soil_sensor_data.csv");
         } finally {
             client.shutdown();
         }

@@ -47,7 +47,7 @@ public class SoilSensorServiceClient {
     }
 
     public static void main(String[] args) {
-        SoilSensorServiceClient client = new SoilSensorServiceClient("localhost", 5000);
+        SoilSensorServiceClient client = new SoilSensorServiceClient("localhost", 6000);
         client.streamSoilServerRequest();
         Scanner scanner = new Scanner(System.in);
         while (true) {

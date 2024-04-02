@@ -12,6 +12,7 @@ public class IrrigationServiceServerImpl extends IrrigationServiceGrpc.Irrigatio
             public void onNext(IrrigationSoilData soildata) {
                 // check if irrigation is needed
                 boolean irrigationNeeded = checkIrrigationNeededLogic(soildata);
+                System.out.println("Current Humidity : " + soildata.getSoilHumidity());
                 IrrigationResult result = IrrigationResult.newBuilder().setIrrigationNeeded(irrigationNeeded).build();
                 responseObserver.onNext(result);
             }
@@ -25,6 +26,7 @@ public class IrrigationServiceServerImpl extends IrrigationServiceGrpc.Irrigatio
             @Override
             public void onCompleted() {
                 // Stream completed
+                System.out.println("Client stream completed");
                 responseObserver.onCompleted();
             }
 
