@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package com.lekkss.irrigation;
+
+option java_multiple_files = true;
+option java_package = "com.lekkss.irrigation.irrigationservice";
+option java_outer_classname = "IrrigationServiceProto";
+
+
+service Irrigation {
+   
+    rpc CheckIrrigationNeeded(stream SoilData) returns (stream IrrigationResult) {}
+}
+
+message IrrigationResult {
+    bool irrigation_needed = 1;
+}
+
+message SoilData {
+    double temperature = 1;
+    double soil_nutrients = 2;
+    double soil_humidity = 3;
+}

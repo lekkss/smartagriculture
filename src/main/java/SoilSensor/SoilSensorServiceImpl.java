@@ -29,8 +29,7 @@ public class SoilSensorServiceImpl extends SoilSensorServiceGrpc.SoilSensorServi
     }
 
     @Override
-    public void streamSoilData(StreamSoilDataRequest request, StreamObserver<SoilData> responseObserver)
-            throws InterruptedException {
+    public void streamSoilData(StreamSoilDataRequest request, StreamObserver<SoilData> responseObserver) {
         try {
             Reader reader = new FileReader(CSV_FILE_PATH);
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader());
@@ -51,7 +50,7 @@ public class SoilSensorServiceImpl extends SoilSensorServiceGrpc.SoilSensorServi
             }
 
             responseObserver.onCompleted();
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
             responseObserver.onError(e);
         }
