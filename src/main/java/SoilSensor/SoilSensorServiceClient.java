@@ -3,6 +3,7 @@ package SoilSensor;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+import com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest;
 import com.lekkss.soilsensor.soilsensorservice.SoilData;
 import com.lekkss.soilsensor.soilsensorservice.SoilSensorServiceGrpc;
 import com.lekkss.soilsensor.soilsensorservice.StreamSoilDataRequest;
@@ -18,6 +19,28 @@ public class SoilSensorServiceClient {
     public SoilSensorServiceClient(String host, int port) {
         this.channel = ManagedChannelBuilder.forAddress(host, port).usePlaintext().build();
         this.stub = SoilSensorServiceGrpc.newStub(channel);
+    }
+
+    public void getSoilData() {
+        GetSoilDataRequest soilDataRequest = GetSoilDataRequest.newBuilder().build();
+        stub.getSoilData(soilDataRequest, new StreamObserver<SoilData>() {
+
+            @Override
+            public void onNext(SoilData responseData) {
+                System.out.println(responseData.getTemperature() + " TEMP");
+            }
+
+            @Override
+            public void onError(Throwable t) {
+                System.out.println("Error: " + t.getMessage());
+            }
+
+            @Override
+            public void onCompleted() {
+                System.out.println("Soil Sensor Service Streaming completed");
+            }
+
+        });
     }
 
     public void streamSoilServerRequest() {
@@ -46,9 +69,18 @@ public class SoilSensorServiceClient {
         stub.streamSoilData(StreamSoilDataRequest.newBuilder().build(), responseObserver);
     }
 
+    public void shutdown() {
+        try {
+            channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            System.err.println("Error while shutting down client: " + e.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
-        SoilSensorServiceClient client = new SoilSensorServiceClient("localhost", 6000);
+        SoilSensorServiceClient client = new SoilSensorServiceClient("localhost", 5000);
         client.streamSoilServerRequest();
+        client.getSoilData();
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Press 'Q' to quit");
@@ -57,14 +89,6 @@ public class SoilSensorServiceClient {
                 client.shutdown();
                 break;
             }
-        }
-    }
-
-    public void shutdown() {
-        try {
-            channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
-        } catch (InterruptedException e) {
-            System.err.println("Error while shutting down client: " + e.getMessage());
         }
     }
 

@@ -6,15 +6,17 @@ package com.lekkss.soilsensor.soilsensorservice;
 /**
  * Protobuf type {@code com.lekkss.soilsensor.SoilData}
  */
-public  final class SoilData extends
+public final class SoilData extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:com.lekkss.soilsensor.SoilData)
     SoilDataOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
+
   // Use SoilData.newBuilder() to construct.
   private SoilData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private SoilData() {
     temperature_ = 0D;
     soilNutrients_ = 0D;
@@ -22,10 +24,10 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private SoilData(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -35,8 +37,7 @@ private static final long serialVersionUID = 0L;
       throw new java.lang.NullPointerException();
     }
     int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
       boolean done = false;
       while (!done) {
@@ -79,21 +80,22 @@ private static final long serialVersionUID = 0L;
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.lekkss.soilsensor.soilsensorservice.SoilSensorServiceProto.internal_static_com_lekkss_soilsensor_SoilData_descriptor;
   }
 
   @java.lang.Override
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
     return com.lekkss.soilsensor.soilsensorservice.SoilSensorServiceProto.internal_static_com_lekkss_soilsensor_SoilData_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.lekkss.soilsensor.soilsensorservice.SoilData.class, com.lekkss.soilsensor.soilsensorservice.SoilData.Builder.class);
+            com.lekkss.soilsensor.soilsensorservice.SoilData.class,
+            com.lekkss.soilsensor.soilsensorservice.SoilData.Builder.class);
   }
 
   public static final int TEMPERATURE_FIELD_NUMBER = 1;
   private double temperature_;
+
   /**
    * <code>double temperature = 1;</code>
    */
@@ -103,6 +105,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int SOIL_NUTRIENTS_FIELD_NUMBER = 2;
   private double soilNutrients_;
+
   /**
    * <code>double soil_nutrients = 2;</code>
    */
@@ -112,6 +115,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int SOIL_HUMIDITY_FIELD_NUMBER = 3;
   private double soilHumidity_;
+
   /**
    * <code>double soil_humidity = 3;</code>
    */
@@ -120,11 +124,14 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
-    if (isInitialized == 1) return true;
-    if (isInitialized == 0) return false;
+    if (isInitialized == 1)
+      return true;
+    if (isInitialized == 0)
+      return false;
 
     memoizedIsInitialized = 1;
     return true;
@@ -132,7 +139,7 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+      throws java.io.IOException {
     if (temperature_ != 0D) {
       output.writeDouble(1, temperature_);
     }
@@ -148,20 +155,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
-    if (size != -1) return size;
+    if (size != -1)
+      return size;
 
     size = 0;
     if (temperature_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(1, temperature_);
+          .computeDoubleSize(1, temperature_);
     }
     if (soilNutrients_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(2, soilNutrients_);
+          .computeDoubleSize(2, soilNutrients_);
     }
     if (soilHumidity_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(3, soilHumidity_);
+          .computeDoubleSize(3, soilHumidity_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -171,7 +179,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.lekkss.soilsensor.soilsensorservice.SoilData)) {
       return super.equals(obj);
@@ -179,18 +187,12 @@ private static final long serialVersionUID = 0L;
     com.lekkss.soilsensor.soilsensorservice.SoilData other = (com.lekkss.soilsensor.soilsensorservice.SoilData) obj;
 
     boolean result = true;
-    result = result && (
-        java.lang.Double.doubleToLongBits(getTemperature())
-        == java.lang.Double.doubleToLongBits(
-            other.getTemperature()));
-    result = result && (
-        java.lang.Double.doubleToLongBits(getSoilNutrients())
-        == java.lang.Double.doubleToLongBits(
-            other.getSoilNutrients()));
-    result = result && (
-        java.lang.Double.doubleToLongBits(getSoilHumidity())
-        == java.lang.Double.doubleToLongBits(
-            other.getSoilHumidity()));
+    result = result && (java.lang.Double.doubleToLongBits(getTemperature()) == java.lang.Double.doubleToLongBits(
+        other.getTemperature()));
+    result = result && (java.lang.Double.doubleToLongBits(getSoilNutrients()) == java.lang.Double.doubleToLongBits(
+        other.getSoilNutrients()));
+    result = result && (java.lang.Double.doubleToLongBits(getSoilHumidity()) == java.lang.Double.doubleToLongBits(
+        other.getSoilHumidity()));
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -221,38 +223,45 @@ private static final long serialVersionUID = 0L;
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.lekkss.soilsensor.soilsensorservice.SoilData parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.lekkss.soilsensor.soilsensorservice.SoilData parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.lekkss.soilsensor.soilsensorservice.SoilData parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.lekkss.soilsensor.soilsensorservice.SoilData parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.lekkss.soilsensor.soilsensorservice.SoilData parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.lekkss.soilsensor.soilsensorservice.SoilData parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
+
   public static com.lekkss.soilsensor.soilsensorservice.SoilData parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -260,11 +269,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.lekkss.soilsensor.soilsensorservice.SoilData parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.lekkss.soilsensor.soilsensorservice.SoilData parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -272,12 +283,14 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.lekkss.soilsensor.soilsensorservice.SoilData parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
+
   public static com.lekkss.soilsensor.soilsensorservice.SoilData parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -287,17 +300,23 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.lekkss.soilsensor.soilsensorservice.SoilData prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+        ? new Builder()
+        : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
@@ -306,6 +325,7 @@ private static final long serialVersionUID = 0L;
     Builder builder = new Builder(parent);
     return builder;
   }
+
   /**
    * Protobuf type {@code com.lekkss.soilsensor.SoilData}
    */
@@ -313,17 +333,16 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.lekkss.soilsensor.SoilData)
       com.lekkss.soilsensor.soilsensorservice.SoilDataOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.lekkss.soilsensor.soilsensorservice.SoilSensorServiceProto.internal_static_com_lekkss_soilsensor_SoilData_descriptor;
     }
 
     @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
       return com.lekkss.soilsensor.soilsensorservice.SoilSensorServiceProto.internal_static_com_lekkss_soilsensor_SoilData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.lekkss.soilsensor.soilsensorservice.SoilData.class, com.lekkss.soilsensor.soilsensorservice.SoilData.Builder.class);
+              com.lekkss.soilsensor.soilsensorservice.SoilData.class,
+              com.lekkss.soilsensor.soilsensorservice.SoilData.Builder.class);
     }
 
     // Construct using com.lekkss.soilsensor.soilsensorservice.SoilData.newBuilder()
@@ -336,11 +355,12 @@ private static final long serialVersionUID = 0L;
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
       }
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -354,8 +374,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
       return com.lekkss.soilsensor.soilsensorservice.SoilSensorServiceProto.internal_static_com_lekkss_soilsensor_SoilData_descriptor;
     }
 
@@ -375,7 +394,8 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.lekkss.soilsensor.soilsensorservice.SoilData buildPartial() {
-      com.lekkss.soilsensor.soilsensorservice.SoilData result = new com.lekkss.soilsensor.soilsensorservice.SoilData(this);
+      com.lekkss.soilsensor.soilsensorservice.SoilData result = new com.lekkss.soilsensor.soilsensorservice.SoilData(
+          this);
       result.temperature_ = temperature_;
       result.soilNutrients_ = soilNutrients_;
       result.soilHumidity_ = soilHumidity_;
@@ -387,38 +407,44 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return (Builder) super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.lekkss.soilsensor.soilsensorservice.SoilData) {
-        return mergeFrom((com.lekkss.soilsensor.soilsensorservice.SoilData)other);
+        return mergeFrom((com.lekkss.soilsensor.soilsensorservice.SoilData) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -426,7 +452,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public Builder mergeFrom(com.lekkss.soilsensor.soilsensorservice.SoilData other) {
-      if (other == com.lekkss.soilsensor.soilsensorservice.SoilData.getDefaultInstance()) return this;
+      if (other == com.lekkss.soilsensor.soilsensorservice.SoilData.getDefaultInstance())
+        return this;
       if (other.getTemperature() != 0D) {
         setTemperature(other.getTemperature());
       }
@@ -465,83 +492,93 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private double temperature_ ;
+    private double temperature_;
+
     /**
      * <code>double temperature = 1;</code>
      */
     public double getTemperature() {
       return temperature_;
     }
+
     /**
      * <code>double temperature = 1;</code>
      */
     public Builder setTemperature(double value) {
-      
+
       temperature_ = value;
       onChanged();
       return this;
     }
+
     /**
      * <code>double temperature = 1;</code>
      */
     public Builder clearTemperature() {
-      
+
       temperature_ = 0D;
       onChanged();
       return this;
     }
 
-    private double soilNutrients_ ;
+    private double soilNutrients_;
+
     /**
      * <code>double soil_nutrients = 2;</code>
      */
     public double getSoilNutrients() {
       return soilNutrients_;
     }
+
     /**
      * <code>double soil_nutrients = 2;</code>
      */
     public Builder setSoilNutrients(double value) {
-      
+
       soilNutrients_ = value;
       onChanged();
       return this;
     }
+
     /**
      * <code>double soil_nutrients = 2;</code>
      */
     public Builder clearSoilNutrients() {
-      
+
       soilNutrients_ = 0D;
       onChanged();
       return this;
     }
 
-    private double soilHumidity_ ;
+    private double soilHumidity_;
+
     /**
      * <code>double soil_humidity = 3;</code>
      */
     public double getSoilHumidity() {
       return soilHumidity_;
     }
+
     /**
      * <code>double soil_humidity = 3;</code>
      */
     public Builder setSoilHumidity(double value) {
-      
+
       soilHumidity_ = value;
       onChanged();
       return this;
     }
+
     /**
      * <code>double soil_humidity = 3;</code>
      */
     public Builder clearSoilHumidity() {
-      
+
       soilHumidity_ = 0D;
       onChanged();
       return this;
     }
+
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -553,7 +590,6 @@ private static final long serialVersionUID = 0L;
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
-
 
     // @@protoc_insertion_point(builder_scope:com.lekkss.soilsensor.SoilData)
   }
@@ -568,8 +604,7 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SoilData>
-      PARSER = new com.google.protobuf.AbstractParser<SoilData>() {
+  private static final com.google.protobuf.Parser<SoilData> PARSER = new com.google.protobuf.AbstractParser<SoilData>() {
     @java.lang.Override
     public SoilData parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
@@ -594,4 +629,3 @@ private static final long serialVersionUID = 0L;
   }
 
 }
-
