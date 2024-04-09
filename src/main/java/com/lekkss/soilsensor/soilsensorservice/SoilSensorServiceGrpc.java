@@ -4,26 +4,33 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(value = "by gRPC proto compiler (version 1.61.1)", comments = "Source: SoilSensorService.proto")
+@javax.annotation.Generated(
+    value = "by gRPC proto compiler (version 1.61.1)",
+    comments = "Source: SoilSensorService.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SoilSensorServiceGrpc {
 
-  private SoilSensorServiceGrpc() {
-  }
+  private SoilSensorServiceGrpc() {}
 
   public static final java.lang.String SERVICE_NAME = "com.lekkss.soilsensor.SoilSensorService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest, com.lekkss.soilsensor.soilsensorservice.SoilData> getGetSoilDataMethod;
+  private static volatile io.grpc.MethodDescriptor<com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest,
+      com.lekkss.soilsensor.soilsensorservice.SoilData> getGetSoilDataMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(fullMethodName = SERVICE_NAME + '/'
-      + "GetSoilData", requestType = com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest.class, responseType = com.lekkss.soilsensor.soilsensorservice.SoilData.class, methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest, com.lekkss.soilsensor.soilsensorservice.SoilData> getGetSoilDataMethod() {
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSoilData",
+      requestType = com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest.class,
+      responseType = com.lekkss.soilsensor.soilsensorservice.SoilData.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest,
+      com.lekkss.soilsensor.soilsensorservice.SoilData> getGetSoilDataMethod() {
     io.grpc.MethodDescriptor<com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest, com.lekkss.soilsensor.soilsensorservice.SoilData> getGetSoilDataMethod;
     if ((getGetSoilDataMethod = SoilSensorServiceGrpc.getGetSoilDataMethod) == null) {
       synchronized (SoilSensorServiceGrpc.class) {
         if ((getGetSoilDataMethod = SoilSensorServiceGrpc.getGetSoilDataMethod) == null) {
-          SoilSensorServiceGrpc.getGetSoilDataMethod = getGetSoilDataMethod = io.grpc.MethodDescriptor.<com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest, com.lekkss.soilsensor.soilsensorservice.SoilData>newBuilder()
+          SoilSensorServiceGrpc.getGetSoilDataMethod = getGetSoilDataMethod =
+              io.grpc.MethodDescriptor.<com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest, com.lekkss.soilsensor.soilsensorservice.SoilData>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSoilData"))
               .setSampledToLocalTracing(true)
@@ -39,16 +46,22 @@ public final class SoilSensorServiceGrpc {
     return getGetSoilDataMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.lekkss.soilsensor.soilsensorservice.StreamSoilDataRequest, com.lekkss.soilsensor.soilsensorservice.SoilData> getStreamSoilDataMethod;
+  private static volatile io.grpc.MethodDescriptor<com.lekkss.soilsensor.soilsensorservice.StreamSoilDataRequest,
+      com.lekkss.soilsensor.soilsensorservice.SoilData> getStreamSoilDataMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(fullMethodName = SERVICE_NAME + '/'
-      + "StreamSoilData", requestType = com.lekkss.soilsensor.soilsensorservice.StreamSoilDataRequest.class, responseType = com.lekkss.soilsensor.soilsensorservice.SoilData.class, methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<com.lekkss.soilsensor.soilsensorservice.StreamSoilDataRequest, com.lekkss.soilsensor.soilsensorservice.SoilData> getStreamSoilDataMethod() {
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StreamSoilData",
+      requestType = com.lekkss.soilsensor.soilsensorservice.StreamSoilDataRequest.class,
+      responseType = com.lekkss.soilsensor.soilsensorservice.SoilData.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.lekkss.soilsensor.soilsensorservice.StreamSoilDataRequest,
+      com.lekkss.soilsensor.soilsensorservice.SoilData> getStreamSoilDataMethod() {
     io.grpc.MethodDescriptor<com.lekkss.soilsensor.soilsensorservice.StreamSoilDataRequest, com.lekkss.soilsensor.soilsensorservice.SoilData> getStreamSoilDataMethod;
     if ((getStreamSoilDataMethod = SoilSensorServiceGrpc.getStreamSoilDataMethod) == null) {
       synchronized (SoilSensorServiceGrpc.class) {
         if ((getStreamSoilDataMethod = SoilSensorServiceGrpc.getStreamSoilDataMethod) == null) {
-          SoilSensorServiceGrpc.getStreamSoilDataMethod = getStreamSoilDataMethod = io.grpc.MethodDescriptor.<com.lekkss.soilsensor.soilsensorservice.StreamSoilDataRequest, com.lekkss.soilsensor.soilsensorservice.SoilData>newBuilder()
+          SoilSensorServiceGrpc.getStreamSoilDataMethod = getStreamSoilDataMethod =
+              io.grpc.MethodDescriptor.<com.lekkss.soilsensor.soilsensorservice.StreamSoilDataRequest, com.lekkss.soilsensor.soilsensorservice.SoilData>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamSoilData"))
               .setSampledToLocalTracing(true)
@@ -68,42 +81,43 @@ public final class SoilSensorServiceGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static SoilSensorServiceStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SoilSensorServiceStub> factory = new io.grpc.stub.AbstractStub.StubFactory<SoilSensorServiceStub>() {
-      @java.lang.Override
-      public SoilSensorServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-        return new SoilSensorServiceStub(channel, callOptions);
-      }
-    };
+    io.grpc.stub.AbstractStub.StubFactory<SoilSensorServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SoilSensorServiceStub>() {
+        @java.lang.Override
+        public SoilSensorServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SoilSensorServiceStub(channel, callOptions);
+        }
+      };
     return SoilSensorServiceStub.newStub(factory, channel);
   }
 
   /**
-   * Creates a new blocking-style stub that supports unary and streaming output
-   * calls on the service
+   * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static SoilSensorServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SoilSensorServiceBlockingStub> factory = new io.grpc.stub.AbstractStub.StubFactory<SoilSensorServiceBlockingStub>() {
-      @java.lang.Override
-      public SoilSensorServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-        return new SoilSensorServiceBlockingStub(channel, callOptions);
-      }
-    };
+    io.grpc.stub.AbstractStub.StubFactory<SoilSensorServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SoilSensorServiceBlockingStub>() {
+        @java.lang.Override
+        public SoilSensorServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SoilSensorServiceBlockingStub(channel, callOptions);
+        }
+      };
     return SoilSensorServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
-   * Creates a new ListenableFuture-style stub that supports unary calls on the
-   * service
+   * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
   public static SoilSensorServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SoilSensorServiceFutureStub> factory = new io.grpc.stub.AbstractStub.StubFactory<SoilSensorServiceFutureStub>() {
-      @java.lang.Override
-      public SoilSensorServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-        return new SoilSensorServiceFutureStub(channel, callOptions);
-      }
-    };
+    io.grpc.stub.AbstractStub.StubFactory<SoilSensorServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SoilSensorServiceFutureStub>() {
+        @java.lang.Override
+        public SoilSensorServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SoilSensorServiceFutureStub(channel, callOptions);
+        }
+      };
     return SoilSensorServiceFutureStub.newStub(factory, channel);
   }
 
@@ -132,15 +146,13 @@ public final class SoilSensorServiceGrpc {
   public static abstract class SoilSensorServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
-    @java.lang.Override
-    public final io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return SoilSensorServiceGrpc.bindService(this);
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service
-   * SoilSensorService.
+   * A stub to allow clients to do asynchronous rpc calls to service SoilSensorService.
    */
   public static final class SoilSensorServiceStub
       extends io.grpc.stub.AbstractAsyncStub<SoilSensorServiceStub> {
@@ -173,8 +185,7 @@ public final class SoilSensorServiceGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service
-   * SoilSensorService.
+   * A stub to allow clients to do synchronous rpc calls to service SoilSensorService.
    */
   public static final class SoilSensorServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<SoilSensorServiceBlockingStub> {
@@ -191,8 +202,7 @@ public final class SoilSensorServiceGrpc {
 
     /**
      */
-    public com.lekkss.soilsensor.soilsensorservice.SoilData getSoilData(
-        com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest request) {
+    public com.lekkss.soilsensor.soilsensorservice.SoilData getSoilData(com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSoilDataMethod(), getCallOptions(), request);
     }
@@ -207,8 +217,7 @@ public final class SoilSensorServiceGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service
-   * SoilSensorService.
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service SoilSensorService.
    */
   public static final class SoilSensorServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<SoilSensorServiceFutureStub> {
@@ -279,22 +288,25 @@ public final class SoilSensorServiceGrpc {
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
         .addMethod(
-            getGetSoilDataMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-                new MethodHandlers<com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest, com.lekkss.soilsensor.soilsensorservice.SoilData>(
-                    service, METHODID_GET_SOIL_DATA)))
+          getGetSoilDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest,
+              com.lekkss.soilsensor.soilsensorservice.SoilData>(
+                service, METHODID_GET_SOIL_DATA)))
         .addMethod(
-            getStreamSoilDataMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-                new MethodHandlers<com.lekkss.soilsensor.soilsensorservice.StreamSoilDataRequest, com.lekkss.soilsensor.soilsensorservice.SoilData>(
-                    service, METHODID_STREAM_SOIL_DATA)))
+          getStreamSoilDataMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.lekkss.soilsensor.soilsensorservice.StreamSoilDataRequest,
+              com.lekkss.soilsensor.soilsensorservice.SoilData>(
+                service, METHODID_STREAM_SOIL_DATA)))
         .build();
   }
 
   private static abstract class SoilSensorServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    SoilSensorServiceBaseDescriptorSupplier() {
-    }
+    SoilSensorServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
@@ -309,8 +321,7 @@ public final class SoilSensorServiceGrpc {
 
   private static final class SoilSensorServiceFileDescriptorSupplier
       extends SoilSensorServiceBaseDescriptorSupplier {
-    SoilSensorServiceFileDescriptorSupplier() {
-    }
+    SoilSensorServiceFileDescriptorSupplier() {}
   }
 
   private static final class SoilSensorServiceMethodDescriptorSupplier

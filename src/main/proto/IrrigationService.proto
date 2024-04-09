@@ -10,6 +10,8 @@ option java_outer_classname = "IrrigationServiceProto";
 service IrrigationService {
    
     rpc CheckIrrigationNeeded(stream IrrigationSoilData) returns (stream IrrigationResult) {}
+    rpc ToggleIrrigation(ToggleIrrigationRequest) returns (ToggleIrrigationResponse) {}
+
 }
 
 message IrrigationResult {
@@ -21,3 +23,13 @@ message IrrigationSoilData {
     double soil_nutrients = 2;
     double soil_humidity = 3;
 }
+
+message ToggleIrrigationRequest {
+    bool enable_irrigation = 1;
+}
+
+message ToggleIrrigationResponse {
+    bool success = 1;
+}
+
+

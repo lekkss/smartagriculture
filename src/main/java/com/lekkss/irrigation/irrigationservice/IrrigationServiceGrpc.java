@@ -46,6 +46,37 @@ public final class IrrigationServiceGrpc {
     return getCheckIrrigationNeededMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.lekkss.irrigation.irrigationservice.ToggleIrrigationRequest,
+      com.lekkss.irrigation.irrigationservice.ToggleIrrigationResponse> getToggleIrrigationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ToggleIrrigation",
+      requestType = com.lekkss.irrigation.irrigationservice.ToggleIrrigationRequest.class,
+      responseType = com.lekkss.irrigation.irrigationservice.ToggleIrrigationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.lekkss.irrigation.irrigationservice.ToggleIrrigationRequest,
+      com.lekkss.irrigation.irrigationservice.ToggleIrrigationResponse> getToggleIrrigationMethod() {
+    io.grpc.MethodDescriptor<com.lekkss.irrigation.irrigationservice.ToggleIrrigationRequest, com.lekkss.irrigation.irrigationservice.ToggleIrrigationResponse> getToggleIrrigationMethod;
+    if ((getToggleIrrigationMethod = IrrigationServiceGrpc.getToggleIrrigationMethod) == null) {
+      synchronized (IrrigationServiceGrpc.class) {
+        if ((getToggleIrrigationMethod = IrrigationServiceGrpc.getToggleIrrigationMethod) == null) {
+          IrrigationServiceGrpc.getToggleIrrigationMethod = getToggleIrrigationMethod =
+              io.grpc.MethodDescriptor.<com.lekkss.irrigation.irrigationservice.ToggleIrrigationRequest, com.lekkss.irrigation.irrigationservice.ToggleIrrigationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ToggleIrrigation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.lekkss.irrigation.irrigationservice.ToggleIrrigationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.lekkss.irrigation.irrigationservice.ToggleIrrigationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new IrrigationServiceMethodDescriptorSupplier("ToggleIrrigation"))
+              .build();
+        }
+      }
+    }
+    return getToggleIrrigationMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -100,6 +131,13 @@ public final class IrrigationServiceGrpc {
         io.grpc.stub.StreamObserver<com.lekkss.irrigation.irrigationservice.IrrigationResult> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getCheckIrrigationNeededMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void toggleIrrigation(com.lekkss.irrigation.irrigationservice.ToggleIrrigationRequest request,
+        io.grpc.stub.StreamObserver<com.lekkss.irrigation.irrigationservice.ToggleIrrigationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getToggleIrrigationMethod(), responseObserver);
+    }
   }
 
   /**
@@ -136,6 +174,14 @@ public final class IrrigationServiceGrpc {
       return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getCheckIrrigationNeededMethod(), getCallOptions()), responseObserver);
     }
+
+    /**
+     */
+    public void toggleIrrigation(com.lekkss.irrigation.irrigationservice.ToggleIrrigationRequest request,
+        io.grpc.stub.StreamObserver<com.lekkss.irrigation.irrigationservice.ToggleIrrigationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getToggleIrrigationMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -152,6 +198,13 @@ public final class IrrigationServiceGrpc {
     protected IrrigationServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new IrrigationServiceBlockingStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.lekkss.irrigation.irrigationservice.ToggleIrrigationResponse toggleIrrigation(com.lekkss.irrigation.irrigationservice.ToggleIrrigationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getToggleIrrigationMethod(), getCallOptions(), request);
     }
   }
 
@@ -170,9 +223,18 @@ public final class IrrigationServiceGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new IrrigationServiceFutureStub(channel, callOptions);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.lekkss.irrigation.irrigationservice.ToggleIrrigationResponse> toggleIrrigation(
+        com.lekkss.irrigation.irrigationservice.ToggleIrrigationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getToggleIrrigationMethod(), getCallOptions()), request);
+    }
   }
 
-  private static final int METHODID_CHECK_IRRIGATION_NEEDED = 0;
+  private static final int METHODID_TOGGLE_IRRIGATION = 0;
+  private static final int METHODID_CHECK_IRRIGATION_NEEDED = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -191,6 +253,10 @@ public final class IrrigationServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_TOGGLE_IRRIGATION:
+          serviceImpl.toggleIrrigation((com.lekkss.irrigation.irrigationservice.ToggleIrrigationRequest) request,
+              (io.grpc.stub.StreamObserver<com.lekkss.irrigation.irrigationservice.ToggleIrrigationResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -219,6 +285,13 @@ public final class IrrigationServiceGrpc {
               com.lekkss.irrigation.irrigationservice.IrrigationSoilData,
               com.lekkss.irrigation.irrigationservice.IrrigationResult>(
                 service, METHODID_CHECK_IRRIGATION_NEEDED)))
+        .addMethod(
+          getToggleIrrigationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.lekkss.irrigation.irrigationservice.ToggleIrrigationRequest,
+              com.lekkss.irrigation.irrigationservice.ToggleIrrigationResponse>(
+                service, METHODID_TOGGLE_IRRIGATION)))
         .build();
   }
 
@@ -268,6 +341,7 @@ public final class IrrigationServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new IrrigationServiceFileDescriptorSupplier())
               .addMethod(getCheckIrrigationNeededMethod())
+              .addMethod(getToggleIrrigationMethod())
               .build();
         }
       }

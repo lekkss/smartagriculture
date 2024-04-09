@@ -5,6 +5,8 @@ import com.lekkss.irrigation.irrigationservice.*;
 import io.grpc.stub.StreamObserver;
 
 public class IrrigationServiceServerImpl extends IrrigationServiceGrpc.IrrigationServiceImplBase {
+    private boolean irrigationStatus = false;
+
     @Override
     public StreamObserver<IrrigationSoilData> checkIrrigationNeeded(StreamObserver<IrrigationResult> responseObserver) {
         return new StreamObserver<IrrigationSoilData>() {
@@ -14,6 +16,15 @@ public class IrrigationServiceServerImpl extends IrrigationServiceGrpc.Irrigatio
                 boolean irrigationNeeded = checkIrrigationNeededLogic(soildata);
                 System.out.println("Current Humidity : " + soildata.getSoilHumidity());
                 IrrigationResult result = IrrigationResult.newBuilder().setIrrigationNeeded(irrigationNeeded).build();
+
+                // Toggle irrigation based on humidity
+                if (irrigationNeeded && !irrigationStatus) {
+                    // If irrigation is needed and it's currently off, turn it on
+                    toggleIrrigation(true);
+                } else if (!irrigationNeeded && irrigationStatus) {
+                    // If irrigation is not needed and it's currently on, turn it off
+                    toggleIrrigation(false);
+                }
                 responseObserver.onNext(result);
             }
 
@@ -38,5 +49,16 @@ public class IrrigationServiceServerImpl extends IrrigationServiceGrpc.Irrigatio
                 return soilData.getSoilHumidity() < 0.5; // Example: Irrigate if soil humidity is less than 0.5
             }
         };
+    }
+
+    // Method to toggle irrigation on or off
+    private void toggleIrrigation(boolean enable) {
+        if (enable) {
+            System.out.println("Turning on irrigation");
+            irrigationStatus = true;
+        } else {
+            System.out.println("Turning off irrigation");
+            irrigationStatus = false;
+        }
     }
 }
