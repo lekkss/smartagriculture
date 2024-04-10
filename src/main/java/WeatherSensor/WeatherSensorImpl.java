@@ -1,27 +1,61 @@
 package WeatherSensor;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
 
 import com.lekkss.weathersensor.weathersensorservice.*;
 
 import io.grpc.stub.StreamObserver;
 
 public class WeatherSensorImpl extends WeatherSensorServiceGrpc.WeatherSensorServiceImplBase {
+    private static final String CSV_FILE_PATH = "C:\\Users\\lekkss\\Desktop\\Distributed System\\smartagriculture\\src\\main\\java\\WeatherSensor\\weather_data.csv";
 
     @Override
     public void getWeatherForecast(LocationCoordinates request, StreamObserver<WeatherData> responseObserver) {
-        System.out.println("Data received From client " + request.getLatitude() + " " + request.getLatitude());
-        WeatherData weatherData = WeatherData.newBuilder()
-                .setTemperature(25.0)
-                .setHumidity(0.6)
-                .setWindSpeed(10.0)
-                .setPrecipitation(0.1)
-                .build();
+        try {
+            WeatherData weatherData = findWeatherData(request.getLatitude(), request.getLongitude());
+            System.out.println("Sending weather data to client");
+            responseObserver.onNext(weatherData);
+            responseObserver.onCompleted();
+        } catch (Exception e) {
+            responseObserver.onError(e);
+        }
+    }
 
-        // Send the weather data back to the client
-        responseObserver.onNext(weatherData);
-        responseObserver.onCompleted();
+    private WeatherData findWeatherData(double latitude, double longitude) throws Exception {
+        Reader reader = new FileReader(CSV_FILE_PATH);
+        CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader());
+
+        try {
+            for (CSVRecord record : csvParser) {
+                double lat = Double.parseDouble(record.get("latitude"));
+                double lng = Double.parseDouble(record.get("longitude"));
+                if (lat == latitude && lng == longitude) {
+                    double temperature = Double.parseDouble(record.get("temperature"));
+                    double humidity = Double.parseDouble(record.get("humidity"));
+                    double windSpeed = Double.parseDouble(record.get("wind_speed"));
+                    double precipitation = Double.parseDouble(record.get("precipitation"));
+                    return WeatherData.newBuilder()
+                            .setTemperature(temperature)
+                            .setHumidity(humidity)
+                            .setWindSpeed(windSpeed)
+                            .setPrecipitation(precipitation)
+                            .build();
+                }
+            }
+        } finally {
+            csvParser.close();
+            reader.close();
+        }
+
+        return null;
     }
 
     @Override

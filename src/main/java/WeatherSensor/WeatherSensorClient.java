@@ -20,7 +20,6 @@ public class WeatherSensorClient {
     public void getWeatherForecast(double latitude, double longitude) {
         LocationCoordinates locationCoordinates = LocationCoordinates.newBuilder().setLatitude(latitude)
                 .setLongitude(longitude).build();
-
         stub.getWeatherForecast(locationCoordinates, new StreamObserver<WeatherData>() {
 
             @Override
@@ -55,7 +54,7 @@ public class WeatherSensorClient {
     public static void main(String[] args) {
         WeatherSensorClient client = new WeatherSensorClient("localhost", 5003);
 
-        client.getWeatherForecast(10.5, 20.5);
+        client.getWeatherForecast(51.5074, -0.1278);
         client.shutdown();
     }
 }
