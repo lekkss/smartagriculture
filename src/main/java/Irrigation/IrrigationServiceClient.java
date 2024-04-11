@@ -1,7 +1,11 @@
 package Irrigation;
 
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -15,6 +19,8 @@ import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
 
 public class IrrigationServiceClient {
+    private static final String CSV_FILE_PATH = "src/main/java/SoilSensor/soil_sensor_data.csv";
+
     private final ManagedChannel channel;
     private final IrrigationServiceGrpc.IrrigationServiceStub stub;
 
@@ -24,7 +30,8 @@ public class IrrigationServiceClient {
     }
 
     public void checkIrrigation(String filePath) throws InterruptedException {
-        try (FileReader reader = new FileReader(filePath);
+        try (InputStream input = new FileInputStream(CSV_FILE_PATH);
+                Reader reader = new InputStreamReader(input);
                 CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader())) {
 
             StreamObserver<IrrigationSoilData> requestObserver = stub
@@ -149,8 +156,7 @@ public class IrrigationServiceClient {
     private static void streamData(IrrigationServiceClient client, Scanner scanner) {
         System.out.println("Starting data streaming...");
         try {
-            client.checkIrrigation(
-                    "C:\\Users\\lekkss\\Desktop\\Distributed System\\smartagriculture\\src\\main\\java\\SoilSensor\\soil_sensor_data.csv");
+            client.checkIrrigation(CSV_FILE_PATH);
             while (true) {
                 if (scanner.hasNextLine()) {
                     String input = scanner.nextLine();

@@ -27,7 +27,7 @@ public class SoilSensorServiceClient {
 
             @Override
             public void onNext(SoilData responseData) {
-                System.out.println("SoilData at: " + time +
+                System.out.println("---------SoilData at: " + time + " ---------" +
                         "\nTemperature(°C) " + responseData.getTemperature() +
                         "\nHumidiy " + responseData.getSoilHumidity() +
                         "\nSoil Nutrient " + responseData.getSoilNutrients());
@@ -40,7 +40,7 @@ public class SoilSensorServiceClient {
 
             @Override
             public void onCompleted() {
-                System.out.println("Soil Sensor Service Streaming completed");
+                System.out.println("---------Soil Sensor Service Streaming completed---------");
             }
 
         });
@@ -51,11 +51,11 @@ public class SoilSensorServiceClient {
             @Override
             public void onNext(SoilData soilData) {
                 // Process incoming soil sensor data
-                System.out.println("Soil data received" +
-                        "\nTime " + soilData.getTimeOfDay() +
-                        "\nTemperature(°C) " + soilData.getTemperature() +
-                        "\nHumidiy " + soilData.getSoilHumidity() +
-                        "\nSoil Nutrient " + soilData.getSoilNutrients());
+                System.out.println("---------Soil data received---------" +
+                        "\nTime of Day: " + soilData.getTimeOfDay() +
+                        "\nTemperature(°C): " + soilData.getTemperature() +
+                        "\nHumidiy: " + soilData.getSoilHumidity() +
+                        "\nSoil Nutrient: " + soilData.getSoilNutrients());
             }
 
             @Override
@@ -67,7 +67,7 @@ public class SoilSensorServiceClient {
             @Override
             public void onCompleted() {
                 // Stream completed
-                System.out.println("Soil Sensor Service Streaming completed");
+                System.out.println("---------Soil Sensor Service Streaming completed---------");
             }
         };
         stub.streamSoilData(StreamSoilDataRequest.newBuilder().build(), responseObserver);
@@ -84,7 +84,7 @@ public class SoilSensorServiceClient {
     public static void main(String[] args) {
         SoilSensorServiceClient client = new SoilSensorServiceClient("localhost", 5000);
         client.streamSoilServerRequest();
-        client.getSoilData("06:15");
+        client.getSoilData("0:15");
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Press 'Q' to quit");

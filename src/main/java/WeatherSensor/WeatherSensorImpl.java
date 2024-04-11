@@ -1,6 +1,10 @@
 package WeatherSensor;
 
+import java.io.FileInputStream;
 import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +18,7 @@ import com.lekkss.weathersensor.weathersensorservice.*;
 import io.grpc.stub.StreamObserver;
 
 public class WeatherSensorImpl extends WeatherSensorServiceGrpc.WeatherSensorServiceImplBase {
-    private static final String CSV_FILE_PATH = "C:\\Users\\lekkss\\Desktop\\Distributed System\\smartagriculture\\src\\main\\java\\WeatherSensor\\weather_data.csv";
+    private static final String CSV_FILE_PATH = "src/main/java/WeatherSensor/weather_data.csv";
 
     @Override
     public void getWeatherForecast(LocationCoordinates request, StreamObserver<WeatherData> responseObserver) {
@@ -29,10 +33,9 @@ public class WeatherSensorImpl extends WeatherSensorServiceGrpc.WeatherSensorSer
     }
 
     private WeatherData findWeatherData(double latitude, double longitude) throws Exception {
-        Reader reader = new FileReader(CSV_FILE_PATH);
-        CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader());
-
-        try {
+        try (InputStream input = new FileInputStream(CSV_FILE_PATH);
+                Reader reader = new InputStreamReader(input);
+                CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader())) {
             for (CSVRecord record : csvParser) {
                 double lat = Double.parseDouble(record.get("latitude"));
                 double lng = Double.parseDouble(record.get("longitude"));
@@ -49,9 +52,9 @@ public class WeatherSensorImpl extends WeatherSensorServiceGrpc.WeatherSensorSer
                             .build();
                 }
             }
-        } finally {
-            csvParser.close();
-            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
         }
 
         return null;
