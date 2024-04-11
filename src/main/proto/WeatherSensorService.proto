@@ -21,5 +21,4 @@ message WeatherData {
     double humidity = 2;
     double wind_speed = 3;
     double precipitation = 4;
-    // Add more weather parameters as needed
 }

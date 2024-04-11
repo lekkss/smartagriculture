@@ -128,10 +128,6 @@ private static final long serialVersionUID = 0L;
   public static final int PRECIPITATION_FIELD_NUMBER = 4;
   private double precipitation_;
   /**
-   * <pre>
-   * Add more weather parameters as needed
-   * </pre>
-   *
    * <code>double precipitation = 4;</code>
    */
   public double getPrecipitation() {
@@ -584,20 +580,12 @@ private static final long serialVersionUID = 0L;
 
     private double precipitation_ ;
     /**
-     * <pre>
-     * Add more weather parameters as needed
-     * </pre>
-     *
      * <code>double precipitation = 4;</code>
      */
     public double getPrecipitation() {
       return precipitation_;
     }
     /**
-     * <pre>
-     * Add more weather parameters as needed
-     * </pre>
-     *
      * <code>double precipitation = 4;</code>
      */
     public Builder setPrecipitation(double value) {
@@ -607,10 +595,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Add more weather parameters as needed
-     * </pre>
-     *
      * <code>double precipitation = 4;</code>
      */
     public Builder clearPrecipitation() {

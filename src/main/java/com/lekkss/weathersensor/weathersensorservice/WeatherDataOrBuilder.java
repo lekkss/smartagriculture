@@ -23,10 +23,6 @@ public interface WeatherDataOrBuilder extends
   double getWindSpeed();
 
   /**
-   * <pre>
-   * Add more weather parameters as needed
-   * </pre>
-   *
    * <code>double precipitation = 4;</code>
    */
   double getPrecipitation();
