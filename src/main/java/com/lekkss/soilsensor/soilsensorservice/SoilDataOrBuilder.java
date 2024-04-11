@@ -8,17 +8,27 @@ public interface SoilDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>double temperature = 1;</code>
+   * <code>string time_of_day = 1;</code>
+   */
+  java.lang.String getTimeOfDay();
+  /**
+   * <code>string time_of_day = 1;</code>
+   */
+  com.google.protobuf.ByteString
+      getTimeOfDayBytes();
+
+  /**
+   * <code>double temperature = 2;</code>
    */
   double getTemperature();
 
   /**
-   * <code>double soil_nutrients = 2;</code>
+   * <code>double soil_nutrients = 3;</code>
    */
   double getSoilNutrients();
 
   /**
-   * <code>double soil_humidity = 3;</code>
+   * <code>double soil_humidity = 4;</code>
    */
   double getSoilHumidity();
 }

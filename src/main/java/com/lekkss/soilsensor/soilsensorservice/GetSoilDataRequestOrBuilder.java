@@ -6,4 +6,14 @@ package com.lekkss.soilsensor.soilsensorservice;
 public interface GetSoilDataRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:com.lekkss.soilsensor.GetSoilDataRequest)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>string time = 1;</code>
+   */
+  java.lang.String getTime();
+  /**
+   * <code>string time = 1;</code>
+   */
+  com.google.protobuf.ByteString
+      getTimeBytes();
 }

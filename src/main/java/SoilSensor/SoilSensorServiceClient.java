@@ -21,13 +21,16 @@ public class SoilSensorServiceClient {
         this.stub = SoilSensorServiceGrpc.newStub(channel);
     }
 
-    public void getSoilData() {
-        GetSoilDataRequest soilDataRequest = GetSoilDataRequest.newBuilder().build();
+    public void getSoilData(String time) {
+        GetSoilDataRequest soilDataRequest = GetSoilDataRequest.newBuilder().setTime(time).build();
         stub.getSoilData(soilDataRequest, new StreamObserver<SoilData>() {
 
             @Override
             public void onNext(SoilData responseData) {
-                System.out.println(responseData.getTemperature() + " TEMP");
+                System.out.println("SoilData at: " + time +
+                        "\nTemperature(°C) " + responseData.getTemperature() +
+                        "\nHumidiy " + responseData.getSoilHumidity() +
+                        "\nSoil Nutrient " + responseData.getSoilNutrients());
             }
 
             @Override
@@ -48,10 +51,11 @@ public class SoilSensorServiceClient {
             @Override
             public void onNext(SoilData soilData) {
                 // Process incoming soil sensor data
-                System.out.println("Received Soil Data:");
-                System.out.println("Temperature: " + soilData.getTemperature());
-                System.out.println("Soil Nutrients: " + soilData.getSoilNutrients());
-                System.out.println("Soil Humidity: " + soilData.getSoilHumidity());
+                System.out.println("Soil data received" +
+                        "\nTime " + soilData.getTimeOfDay() +
+                        "\nTemperature(°C) " + soilData.getTemperature() +
+                        "\nHumidiy " + soilData.getSoilHumidity() +
+                        "\nSoil Nutrient " + soilData.getSoilNutrients());
             }
 
             @Override
@@ -80,7 +84,7 @@ public class SoilSensorServiceClient {
     public static void main(String[] args) {
         SoilSensorServiceClient client = new SoilSensorServiceClient("localhost", 5000);
         client.streamSoilServerRequest();
-        client.getSoilData();
+        client.getSoilData("06:15");
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Press 'Q' to quit");

@@ -12,6 +12,7 @@ C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\le
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\lekkss\weathersensor\weathersensorservice\WeatherSensorServiceGrpc.java
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\Irrigation\IrrigationServiceServerImpl.java
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\lekkss\irrigation\irrigationservice\IrrigationSoilDataOrBuilder.java
+C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\WeatherSensor\WeatherSensorImpl.java
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\lekkss\soilsensor\soilsensorservice\SoilSensorServiceProto.java
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\SoilSensor\SoilSensorServiceClient.java
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\lekkss\soilsensor\soilsensorservice\SoilDataOrBuilder.java
@@ -21,6 +22,7 @@ C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\le
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\lekkss\weathersensor\weathersensorservice\WeatherDataOrBuilder.java
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\lekkss\irrigation\irrigationservice\ToggleIrrigationResponse.java
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\lekkss\soilsensor\soilsensorservice\SoilData.java
+C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\WeatherSensor\WeatherSensorServer.java
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\lekkss\weathersensor\weathersensorservice\WeatherData.java
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\lekkss\irrigation\irrigationservice\IrrigationResult.java
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\lekkss\irrigation\irrigationservice\IrrigationServiceGrpc.java
@@ -29,3 +31,4 @@ C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\le
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\lekkss\irrigation\irrigationservice\IrrigationSoilData.java
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\lekkss\irrigation\irrigationservice\IrrigationResultOrBuilder.java
 C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\com\lekkss\soilsensor\soilsensorservice\SoilSensorServiceGrpc.java
+C:\Users\lekkss\Desktop\Distributed System\smartagriculture\src\main\java\WeatherSensor\WeatherSensorClient.java

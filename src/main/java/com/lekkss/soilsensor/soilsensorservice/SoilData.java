@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SoilData() {
+    timeOfDay_ = "";
     temperature_ = 0D;
     soilNutrients_ = 0D;
     soilHumidity_ = 0D;
@@ -45,17 +46,23 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 9: {
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            temperature_ = input.readDouble();
+            timeOfDay_ = s;
             break;
           }
           case 17: {
 
-            soilNutrients_ = input.readDouble();
+            temperature_ = input.readDouble();
             break;
           }
           case 25: {
+
+            soilNutrients_ = input.readDouble();
+            break;
+          }
+          case 33: {
 
             soilHumidity_ = input.readDouble();
             break;
@@ -92,28 +99,62 @@ private static final long serialVersionUID = 0L;
             com.lekkss.soilsensor.soilsensorservice.SoilData.class, com.lekkss.soilsensor.soilsensorservice.SoilData.Builder.class);
   }
 
-  public static final int TEMPERATURE_FIELD_NUMBER = 1;
+  public static final int TIME_OF_DAY_FIELD_NUMBER = 1;
+  private volatile java.lang.Object timeOfDay_;
+  /**
+   * <code>string time_of_day = 1;</code>
+   */
+  public java.lang.String getTimeOfDay() {
+    java.lang.Object ref = timeOfDay_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      timeOfDay_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string time_of_day = 1;</code>
+   */
+  public com.google.protobuf.ByteString
+      getTimeOfDayBytes() {
+    java.lang.Object ref = timeOfDay_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      timeOfDay_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TEMPERATURE_FIELD_NUMBER = 2;
   private double temperature_;
   /**
-   * <code>double temperature = 1;</code>
+   * <code>double temperature = 2;</code>
    */
   public double getTemperature() {
     return temperature_;
   }
 
-  public static final int SOIL_NUTRIENTS_FIELD_NUMBER = 2;
+  public static final int SOIL_NUTRIENTS_FIELD_NUMBER = 3;
   private double soilNutrients_;
   /**
-   * <code>double soil_nutrients = 2;</code>
+   * <code>double soil_nutrients = 3;</code>
    */
   public double getSoilNutrients() {
     return soilNutrients_;
   }
 
-  public static final int SOIL_HUMIDITY_FIELD_NUMBER = 3;
+  public static final int SOIL_HUMIDITY_FIELD_NUMBER = 4;
   private double soilHumidity_;
   /**
-   * <code>double soil_humidity = 3;</code>
+   * <code>double soil_humidity = 4;</code>
    */
   public double getSoilHumidity() {
     return soilHumidity_;
@@ -133,14 +174,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!getTimeOfDayBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, timeOfDay_);
+    }
     if (temperature_ != 0D) {
-      output.writeDouble(1, temperature_);
+      output.writeDouble(2, temperature_);
     }
     if (soilNutrients_ != 0D) {
-      output.writeDouble(2, soilNutrients_);
+      output.writeDouble(3, soilNutrients_);
     }
     if (soilHumidity_ != 0D) {
-      output.writeDouble(3, soilHumidity_);
+      output.writeDouble(4, soilHumidity_);
     }
     unknownFields.writeTo(output);
   }
@@ -151,17 +195,20 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!getTimeOfDayBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, timeOfDay_);
+    }
     if (temperature_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(1, temperature_);
+        .computeDoubleSize(2, temperature_);
     }
     if (soilNutrients_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(2, soilNutrients_);
+        .computeDoubleSize(3, soilNutrients_);
     }
     if (soilHumidity_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(3, soilHumidity_);
+        .computeDoubleSize(4, soilHumidity_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -179,6 +226,8 @@ private static final long serialVersionUID = 0L;
     com.lekkss.soilsensor.soilsensorservice.SoilData other = (com.lekkss.soilsensor.soilsensorservice.SoilData) obj;
 
     boolean result = true;
+    result = result && getTimeOfDay()
+        .equals(other.getTimeOfDay());
     result = result && (
         java.lang.Double.doubleToLongBits(getTemperature())
         == java.lang.Double.doubleToLongBits(
@@ -202,6 +251,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + TIME_OF_DAY_FIELD_NUMBER;
+    hash = (53 * hash) + getTimeOfDay().hashCode();
     hash = (37 * hash) + TEMPERATURE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getTemperature()));
@@ -344,6 +395,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      timeOfDay_ = "";
+
       temperature_ = 0D;
 
       soilNutrients_ = 0D;
@@ -376,6 +429,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.lekkss.soilsensor.soilsensorservice.SoilData buildPartial() {
       com.lekkss.soilsensor.soilsensorservice.SoilData result = new com.lekkss.soilsensor.soilsensorservice.SoilData(this);
+      result.timeOfDay_ = timeOfDay_;
       result.temperature_ = temperature_;
       result.soilNutrients_ = soilNutrients_;
       result.soilHumidity_ = soilHumidity_;
@@ -427,6 +481,10 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.lekkss.soilsensor.soilsensorservice.SoilData other) {
       if (other == com.lekkss.soilsensor.soilsensorservice.SoilData.getDefaultInstance()) return this;
+      if (!other.getTimeOfDay().isEmpty()) {
+        timeOfDay_ = other.timeOfDay_;
+        onChanged();
+      }
       if (other.getTemperature() != 0D) {
         setTemperature(other.getTemperature());
       }
@@ -465,15 +523,84 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object timeOfDay_ = "";
+    /**
+     * <code>string time_of_day = 1;</code>
+     */
+    public java.lang.String getTimeOfDay() {
+      java.lang.Object ref = timeOfDay_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        timeOfDay_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string time_of_day = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTimeOfDayBytes() {
+      java.lang.Object ref = timeOfDay_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        timeOfDay_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string time_of_day = 1;</code>
+     */
+    public Builder setTimeOfDay(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      timeOfDay_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string time_of_day = 1;</code>
+     */
+    public Builder clearTimeOfDay() {
+      
+      timeOfDay_ = getDefaultInstance().getTimeOfDay();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string time_of_day = 1;</code>
+     */
+    public Builder setTimeOfDayBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      timeOfDay_ = value;
+      onChanged();
+      return this;
+    }
+
     private double temperature_ ;
     /**
-     * <code>double temperature = 1;</code>
+     * <code>double temperature = 2;</code>
      */
     public double getTemperature() {
       return temperature_;
     }
     /**
-     * <code>double temperature = 1;</code>
+     * <code>double temperature = 2;</code>
      */
     public Builder setTemperature(double value) {
       
@@ -482,7 +609,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>double temperature = 1;</code>
+     * <code>double temperature = 2;</code>
      */
     public Builder clearTemperature() {
       
@@ -493,13 +620,13 @@ private static final long serialVersionUID = 0L;
 
     private double soilNutrients_ ;
     /**
-     * <code>double soil_nutrients = 2;</code>
+     * <code>double soil_nutrients = 3;</code>
      */
     public double getSoilNutrients() {
       return soilNutrients_;
     }
     /**
-     * <code>double soil_nutrients = 2;</code>
+     * <code>double soil_nutrients = 3;</code>
      */
     public Builder setSoilNutrients(double value) {
       
@@ -508,7 +635,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>double soil_nutrients = 2;</code>
+     * <code>double soil_nutrients = 3;</code>
      */
     public Builder clearSoilNutrients() {
       
@@ -519,13 +646,13 @@ private static final long serialVersionUID = 0L;
 
     private double soilHumidity_ ;
     /**
-     * <code>double soil_humidity = 3;</code>
+     * <code>double soil_humidity = 4;</code>
      */
     public double getSoilHumidity() {
       return soilHumidity_;
     }
     /**
-     * <code>double soil_humidity = 3;</code>
+     * <code>double soil_humidity = 4;</code>
      */
     public Builder setSoilHumidity(double value) {
       
@@ -534,7 +661,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>double soil_humidity = 3;</code>
+     * <code>double soil_humidity = 4;</code>
      */
     public Builder clearSoilHumidity() {
       

@@ -11,12 +11,15 @@ service SoilSensorService {
     rpc StreamSoilData(StreamSoilDataRequest) returns (stream SoilData);
 }
 
-message GetSoilDataRequest {}
+message GetSoilDataRequest {
+    string time = 1;
+}
 
 message StreamSoilDataRequest {}
 
 message SoilData {
-    double temperature = 1;
-    double soil_nutrients = 2;
-    double soil_humidity = 3;
+    string time_of_day = 1;
+    double temperature = 2;
+    double soil_nutrients = 3;
+    double soil_humidity = 4;
 }

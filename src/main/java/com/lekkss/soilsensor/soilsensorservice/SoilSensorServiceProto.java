@@ -39,17 +39,18 @@ public final class SoilSensorServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\027SoilSensorService.proto\022\025com.lekkss.so" +
-      "ilsensor\"\024\n\022GetSoilDataRequest\"\027\n\025Stream" +
-      "SoilDataRequest\"N\n\010SoilData\022\023\n\013temperatu" +
-      "re\030\001 \001(\001\022\026\n\016soil_nutrients\030\002 \001(\001\022\025\n\rsoil" +
-      "_humidity\030\003 \001(\0012\321\001\n\021SoilSensorService\022Y\n" +
-      "\013GetSoilData\022).com.lekkss.soilsensor.Get" +
-      "SoilDataRequest\032\037.com.lekkss.soilsensor." +
-      "SoilData\022a\n\016StreamSoilData\022,.com.lekkss." +
-      "soilsensor.StreamSoilDataRequest\032\037.com.l" +
-      "ekkss.soilsensor.SoilData0\001BC\n\'com.lekks" +
-      "s.soilsensor.soilsensorserviceB\026SoilSens" +
-      "orServiceProtoP\001b\006proto3"
+      "ilsensor\"\"\n\022GetSoilDataRequest\022\014\n\004time\030\001" +
+      " \001(\t\"\027\n\025StreamSoilDataRequest\"c\n\010SoilDat" +
+      "a\022\023\n\013time_of_day\030\001 \001(\t\022\023\n\013temperature\030\002 " +
+      "\001(\001\022\026\n\016soil_nutrients\030\003 \001(\001\022\025\n\rsoil_humi" +
+      "dity\030\004 \001(\0012\321\001\n\021SoilSensorService\022Y\n\013GetS" +
+      "oilData\022).com.lekkss.soilsensor.GetSoilD" +
+      "ataRequest\032\037.com.lekkss.soilsensor.SoilD" +
+      "ata\022a\n\016StreamSoilData\022,.com.lekkss.soils" +
+      "ensor.StreamSoilDataRequest\032\037.com.lekkss" +
+      ".soilsensor.SoilData0\001BC\n\'com.lekkss.soi" +
+      "lsensor.soilsensorserviceB\026SoilSensorSer" +
+      "viceProtoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -68,7 +69,7 @@ public final class SoilSensorServiceProto {
     internal_static_com_lekkss_soilsensor_GetSoilDataRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_lekkss_soilsensor_GetSoilDataRequest_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Time", });
     internal_static_com_lekkss_soilsensor_StreamSoilDataRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_lekkss_soilsensor_StreamSoilDataRequest_fieldAccessorTable = new
@@ -80,7 +81,7 @@ public final class SoilSensorServiceProto {
     internal_static_com_lekkss_soilsensor_SoilData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_lekkss_soilsensor_SoilData_descriptor,
-        new java.lang.String[] { "Temperature", "SoilNutrients", "SoilHumidity", });
+        new java.lang.String[] { "TimeOfDay", "Temperature", "SoilNutrients", "SoilHumidity", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
