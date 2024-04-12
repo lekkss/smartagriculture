@@ -90,97 +90,18 @@ public class IrrigationServiceClient {
         }
     }
 
-    // public static void main(String[] args) throws InterruptedException {
-    // IrrigationServiceClient client = new IrrigationServiceClient("localhost",
-    // 5051);
-    // try {
-
-    // Scanner scanner = new Scanner(System.in);
-    // System.out.println(
-    // "Press 1 to start streaming, press 2 to get current SoilData information or
-    // press Q to quit");
-
-    // String input = scanner.nextLine();
-    // while (input != "q") {
-    // // System.out.println("Press 'Q' to quit");
-
-    // if (input.equalsIgnoreCase("1")) {
-    // client.checkIrrigation(
-    // "C:\\Users\\lekkss\\Desktop\\Distributed
-    // System\\smartagriculture\\src\\main\\java\\SoilSensor\\soil_sensor_data.csv");
-    // if (input.equalsIgnoreCase("Q")) {
-    // client.shutdown();
-    // break;
-    // }
-
-    // } else if (input.equalsIgnoreCase("2")) {
-    // System.out.println("Gotten Data");
-    // } else if (input.equalsIgnoreCase("Q")) {
-    // client.shutdown();
-    // break;
-    // } else {
-    // System.out.println("Enter a valid input");
-    // }
-    // }
-    // } finally {
-    // client.shutdown();
-    // }
-    // }
-
     public static void main(String[] args) throws InterruptedException {
         IrrigationServiceClient client = new IrrigationServiceClient("localhost", 5051);
-
-        try {
-            Scanner scanner = new Scanner(System.in);
-
-            while (true) {
-                System.out.println(
-                        "Press 1 to start streaming, press 2 to get current SoilData information, or press Q to quit");
-
-                String input = scanner.nextLine();
-                if (input.equalsIgnoreCase("1")) {
-                    streamData(client, scanner);
-                } else if (input.equalsIgnoreCase("2")) {
-                    showCurrentData(client);
-                } else if (input.equalsIgnoreCase("Q")) {
-                    break;
-                } else {
-                    System.out.println("Enter a valid input");
-                }
+        client.checkIrrigation(CSV_FILE_PATH);
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Press 'Q' to quit");
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("Q")) {
+                client.shutdown();
+                break;
             }
-        } finally {
-            client.shutdown();
         }
-    }
-
-    private static void streamData(IrrigationServiceClient client, Scanner scanner) {
-        System.out.println("Starting data streaming...");
-        try {
-            client.checkIrrigation(CSV_FILE_PATH);
-            while (true) {
-                if (scanner.hasNextLine()) {
-                    String input = scanner.nextLine();
-                    if (input.equalsIgnoreCase("Q")) {
-                        System.out.println("Stopping data streaming.");
-                        client.shutdown(); // Method to stop streaming
-                        break;
-                    }
-                }
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Streaming complete. Press Enter to return to the main menu.");
-        // Wait for user input to return to main menu
-        new Scanner(System.in).nextLine();
-    }
-
-    private static void showCurrentData(IrrigationServiceClient client) {
-        System.out.println("Getting current data...");
-        // Call the method to get current soil data
-        System.out.println("Current data received. Press Enter to return to the main menu.");
-        // Wait for user input to return to main menu
-        new Scanner(System.in).nextLine();
     }
 
 }

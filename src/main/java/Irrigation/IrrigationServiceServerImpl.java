@@ -41,12 +41,8 @@ public class IrrigationServiceServerImpl extends IrrigationServiceGrpc.Irrigatio
                 responseObserver.onCompleted();
             }
 
-            // Example logic to check if irrigation is needed based on soil data
             private boolean checkIrrigationNeededLogic(IrrigationSoilData soilData) {
-                // Implement your logic here
-                // For example, check soil moisture level, temperature, etc.
-                // Return true if irrigation is needed, false otherwise
-                return soilData.getSoilHumidity() < 0.5; // Example: Irrigate if soil humidity is less than 0.5
+                return soilData.getSoilHumidity() < 0.5;
             }
         };
     }

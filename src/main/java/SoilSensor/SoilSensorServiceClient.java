@@ -40,7 +40,7 @@ public class SoilSensorServiceClient {
 
             @Override
             public void onCompleted() {
-                System.out.println("---------Soil Sensor Service Streaming completed---------");
+                System.out.println("---------Soil Sensor Data Sent Successfully---------");
             }
 
         });

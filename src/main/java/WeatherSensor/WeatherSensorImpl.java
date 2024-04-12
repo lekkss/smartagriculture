@@ -1,7 +1,6 @@
 package WeatherSensor;
 
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -84,8 +83,7 @@ public class WeatherSensorImpl extends WeatherSensorServiceGrpc.WeatherSensorSer
                 double totalPrecipitation = 0.0;
 
                 for (LocationCoordinates location : locationList) {
-                    // Assuming some logic to calculate weather forecast for each location
-                    // For simplicity, we are using dummy values here
+
                     totalTemperature += 25.0;
                     totalHumidity += 0.6;
                     totalWindSpeed += 10.0;
