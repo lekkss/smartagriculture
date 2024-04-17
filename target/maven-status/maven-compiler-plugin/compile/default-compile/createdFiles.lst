@@ -14,6 +14,7 @@ com\lekkss\irrigation\irrigationservice\IrrigationServiceGrpc$IrrigationServiceB
 com\lekkss\soilsensor\soilsensorservice\SoilData$Builder.class
 com\lekkss\soilsensor\soilsensorservice\SoilDataOrBuilder.class
 com\lekkss\weathersensor\weathersensorservice\WeatherSensorServiceGrpc$AsyncService.class
+SmartFarm.class
 com\lekkss\soilsensor\soilsensorservice\SoilSensorServiceGrpc.class
 com\lekkss\irrigation\irrigationservice\IrrigationServiceGrpc.class
 com\lekkss\irrigation\irrigationservice\ToggleIrrigationResponse$1.class
@@ -61,6 +62,7 @@ com\lekkss\irrigation\irrigationservice\ToggleIrrigationResponse$Builder.class
 com\lekkss\irrigation\irrigationservice\IrrigationServiceGrpc$2.class
 com\lekkss\weathersensor\weathersensorservice\WeatherSensorServiceGrpc$WeatherSensorServiceMethodDescriptorSupplier.class
 com\lekkss\irrigation\irrigationservice\IrrigationSoilData$Builder.class
+HelloWorld.class
 com\lekkss\soilsensor\soilsensorservice\SoilSensorServiceGrpc$SoilSensorServiceBlockingStub.class
 com\lekkss\soilsensor\soilsensorservice\SoilSensorServiceGrpc$SoilSensorServiceImplBase.class
 com\lekkss\weathersensor\weathersensorservice\LocationCoordinatesOrBuilder.class

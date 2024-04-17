@@ -72,7 +72,7 @@ public class SmartAgriculture {
 
     public void streamSoilData() {
         try {
-            soilSensorClient.streamSoilServerRequest();
+            // soilSensorClient.streamSoilServerRequest();
         } catch (Exception e) {
             System.err.println("Error occurred during irrigation: " + e.getMessage());
         }

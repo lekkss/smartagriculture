@@ -51,10 +51,31 @@
       <artifactId>consul-api</artifactId>
       <version>1.4.5</version>
     </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx</artifactId>
+      <version>11</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-controls</artifactId>
+      <version>12.0.2</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>0.0.8</version>
+        <configuration>
+          <mainClass>HelloWorld</mainClass>
+        </configuration>
+      </plugin>
       <!-- Add protoc-jar-maven-plugin -->
       <plugin>
         <groupId>com.github.os72</groupId>

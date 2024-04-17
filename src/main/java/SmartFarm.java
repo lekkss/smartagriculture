@@ -1,11 +1,11 @@
 import java.util.List;
-import java.util.Scanner;
 
 import com.ecwid.consul.v1.ConsulClient;
 import com.ecwid.consul.v1.health.model.HealthService;
 
 import Irrigation.IrrigationServiceClient;
 import SoilSensor.SoilSensorServiceClient;
+import javafx.scene.control.Label;
 
 public class SmartFarm {
 
@@ -37,78 +37,40 @@ public class SmartFarm {
         this.soilSensorClient = new SoilSensorServiceClient(soilSensorHealthServices.get(0).getService().getAddress(),
                 soilSensorHealthServices.get(0).getService().getPort());
 
-        startServer();
+        // startServer();
     }
 
-    public void startServer() {
-        Scanner scanner = new Scanner(System.in);
-        boolean running = true;
-
-        while (running) {
-            System.out.println("Welcome to the FarmService command line prompt");
-            System.out.println("Select an option:");
-            System.out.println("1. Irrigate field");
-            System.out.println("2. Stream SoilData");
-            System.out.println("3. Check SoilData");
-            System.out.println("4. Exit");
-
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline character
-
-            switch (choice) {
-                case 1:
-                    irrigateField();
-                    break;
-                case 2:
-                    streamSoilData();
-                    break;
-                case 3:
-                    getSoilData();
-                    break;
-                case 4:
-                    running = false;
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please select again.");
-                    break;
-            }
-        }
-
-        System.out.println("FarmService command line prompt has been terminated.");
-    }
-
-    private void irrigateField() {
-        Scanner scanner = new Scanner(System.in);
-        // Call irrigation service to check and perform irrigation
+    public void irrigateField() {
         try {
             irrigationClient.checkIrrigation("src/main/resources/consul.properties");
         } catch (InterruptedException e) {
-            System.err.println("Error occurred during irrigation: " + e.getMessage());
+            System.err.println("Error occurred during irrigateField(): " + e.getMessage());
         }
     }
 
-    public void streamSoilData() {
-        soilSensorClient.streamSoilServerRequest();
+    public void streamSoilData(Label soilDataLabel) {
         try {
-            Scanner sc = new Scanner(System.in);
-            while (true) {
-                System.out.println("Press 'Q' to quit");
-                String input = sc.nextLine();
-                if (input.equalsIgnoreCase("Q")) {
-                    soilSensorClient.shutdown();
-                    break;
-                }
-            }
-        } catch (Exception e) {
-            System.err.println("Error occurred during irrigation: " + e.getMessage());
+            soilSensorClient.streamSoilServerRequest(soilDataLabel);
+        } catch (
+
+        Exception e) {
+            System.err.println("Error occurred during streamSoilData(): " + e.getMessage());
         }
     }
 
-    public void getSoilData() {
+    public void shutdown() {
         try {
-            soilSensorClient.getSoilData("06:30");
+            soilSensorClient.shutdown();
         } catch (Exception e) {
-            System.err.println("Error occurred during irrigation: " + e.getMessage());
+            System.err.println("Error occurred during shutdown(): " + e.getMessage());
+        }
+    }
+
+    public void getSoilData(Label soilDataLabel) {
+        try {
+            soilSensorClient.getSoilData("06:30", soilDataLabel);
+        } catch (Exception e) {
+            System.err.println("Error occurred during getSoilDate(): " + e.getMessage());
         }
     }
 

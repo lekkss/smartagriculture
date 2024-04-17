@@ -20,7 +20,7 @@ public class SoilSensorServiceImpl extends SoilSensorServiceGrpc.SoilSensorServi
     // FileInputStream fileInputStream = new
     // FileInputStream("src/main/java/SoilSensor/soil_sensor_data.csv");
     private static final String CSV_FILE_PATH = "src/main/java/SoilSensor/soil_sensor_data.csv";
-    private static final long STREAM_INTERVAL_MS = 7000;
+    private static final long STREAM_INTERVAL_MS = 2000;
 
     @Override
     public void getSoilData(GetSoilDataRequest request, StreamObserver<SoilData> responseObserver) {
