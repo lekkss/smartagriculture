@@ -8,7 +8,9 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Consumer;
 
+import javafx.scene.text.Text;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -29,16 +31,17 @@ public class IrrigationServiceClient {
         this.stub = IrrigationServiceGrpc.newStub(channel);
     }
 
-    public void checkIrrigation(String filePath) throws InterruptedException {
+    public void checkIrrigation(Text text) throws InterruptedException {
         try (InputStream input = new FileInputStream(CSV_FILE_PATH);
-                Reader reader = new InputStreamReader(input);
-                CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader())) {
+             Reader reader = new InputStreamReader(input);
+             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader())) {
 
+            // Create a StreamObserver to handle streamed data
             StreamObserver<IrrigationSoilData> requestObserver = stub
                     .checkIrrigationNeeded(new StreamObserver<IrrigationResult>() {
                         @Override
                         public void onNext(IrrigationResult irrigationResult) {
-                            toggleIrrigation(irrigationResult.getIrrigationNeeded());
+                            text.setText("HERE");
                         }
 
                         @Override
@@ -52,6 +55,7 @@ public class IrrigationServiceClient {
                         }
                     });
 
+            // Iterate through CSV records and send each record's data
             for (CSVRecord record : csvParser) {
                 float temperature = Float.parseFloat(record.get("Temperature (°C)"));
                 float soilNutrients = Float.parseFloat(record.get("Soil Nutrients"));
@@ -62,15 +66,23 @@ public class IrrigationServiceClient {
                         .setSoilNutrients(soilNutrients)
                         .setSoilHumidity(soilHumidity)
                         .build();
-                TimeUnit.MILLISECONDS.sleep(7000);
+
+                // Send each record's data
                 requestObserver.onNext(soilData);
+
+                // Simulate delay
+                TimeUnit.MILLISECONDS.sleep(2000);
             }
 
+            // Indicate that all data has been sent
             requestObserver.onCompleted();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
+
 
     public void shutdown() {
         try {
@@ -80,19 +92,19 @@ public class IrrigationServiceClient {
         }
     }
 
-    private void toggleIrrigation(boolean enable) {
-        if (enable) {
-            System.out.println("Turning on irrigation");
-
-        } else {
-            System.out.println("Turning off irrigation");
-
-        }
-    }
+//    private void toggleIrrigation(boolean enable) {
+//        if (enable) {
+//            System.out.println("Turning on irrigation");
+//
+//        } else {
+//            System.out.println("Turning off irrigation");
+//
+//        }
+//    }
 
     public static void main(String[] args) throws InterruptedException {
         IrrigationServiceClient client = new IrrigationServiceClient("localhost", 5051);
-        client.checkIrrigation(CSV_FILE_PATH);
+//        client.checkIrrigation();
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Press 'Q' to quit");

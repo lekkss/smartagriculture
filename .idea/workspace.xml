@@ -5,36 +5,175 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c528591c-78fb-4da4-aa73-de3e658dbaaf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HelloWorld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceServerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SmartAgriculture.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SmartFarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SmartFarm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WeatherSensor/WeatherSensorServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeatherSensor/WeatherSensorServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServerImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServerImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SmartAgriculture.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SmartFarm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartFarm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationResult$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationResult$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationResult$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationResult$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$AsyncService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$AsyncService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceBaseDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceBaseDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceBlockingStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceBlockingStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceFileDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceFileDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceFutureStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceFutureStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceImplBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceImplBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceMethodDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceMethodDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$IrrigationServiceStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$MethodHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc$MethodHandlers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceGrpc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceProto$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceProto$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceProto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationServiceProto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationSoilData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationSoilData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationSoilData$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationSoilData$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationSoilData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/IrrigationSoilData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/ToggleIrrigationRequest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/ToggleIrrigationRequest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/ToggleIrrigationRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/ToggleIrrigationRequest$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/ToggleIrrigationRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/ToggleIrrigationRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/ToggleIrrigationResponse$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/ToggleIrrigationResponse$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/ToggleIrrigationResponse$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/ToggleIrrigationResponse$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/ToggleIrrigationResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/irrigation/irrigationservice/ToggleIrrigationResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/GetSoilDataRequest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/GetSoilDataRequest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/GetSoilDataRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/GetSoilDataRequest$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/GetSoilDataRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/GetSoilDataRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilData$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilData$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$AsyncService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$AsyncService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$MethodHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$MethodHandlers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceBaseDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceBaseDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceBlockingStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceBlockingStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceFileDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceFileDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceFutureStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceFutureStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceImplBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceImplBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceMethodDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceMethodDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc$SoilSensorServiceStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceGrpc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceProto$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceProto$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceProto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/SoilSensorServiceProto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/StreamSoilDataRequest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/StreamSoilDataRequest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/StreamSoilDataRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/StreamSoilDataRequest$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/StreamSoilDataRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/soilsensor/soilsensorservice/StreamSoilDataRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/LocationCoordinates$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/LocationCoordinates$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/LocationCoordinates$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/LocationCoordinates$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/LocationCoordinates.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/LocationCoordinates.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherData$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherData$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$AsyncService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$AsyncService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$MethodHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$MethodHandlers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceBaseDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceBaseDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceBlockingStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceBlockingStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceFileDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceFileDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceFutureStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceFutureStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceImplBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceImplBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceMethodDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceMethodDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc$WeatherSensorServiceStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceGrpc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceProto$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceProto$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceProto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lekkss/weathersensor/weathersensorservice/WeatherSensorServiceProto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2fEzn2vkNM5NQyRDwdf2evK8y4A" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/lekkss/Desktop/Distributed System/smartagriculture"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lekkss/AppData/Local/SceneBuilder/SceneBuilder.exe&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.34827587&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="Application.NewFile">
+    <configuration name="NewFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NewFile" />
+      <module name="smartagriculture" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\javafx-sdk-22\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SoilSensorServiceServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SoilSensor.SoilSensorServiceServer" />
+      <module name="smartagriculture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SoilSensor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.SoilSensorServiceServer" />
+      <item itemvalue="Application.NewFile" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.NewFile" />
+        <item itemvalue="Application.SoilSensorServiceServer" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,5 +184,12 @@
       <updated>1713381191412</updated>
     </task>
     <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/smartagriculture$NewFile.ic" NAME="NewFile Coverage Results" MODIFIED="1713526158782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

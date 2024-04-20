@@ -14,16 +14,17 @@ public class IrrigationServiceServerImpl extends IrrigationServiceGrpc.Irrigatio
             public void onNext(IrrigationSoilData soildata) {
                 // check if irrigation is needed
                 boolean irrigationNeeded = checkIrrigationNeededLogic(soildata);
-                System.out.println("Current Humidity : " + soildata.getSoilHumidity());
+//                System.out.println("Current Humidity : " + soildata.getSoilHumidity());
                 IrrigationResult result = IrrigationResult.newBuilder().setIrrigationNeeded(irrigationNeeded).build();
+
 
                 // Toggle irrigation based on humidity
                 if (irrigationNeeded && !irrigationStatus) {
                     // If irrigation is needed and it's currently off, turn it on
-                    toggleIrrigation(true);
+                    switchIrrigation(true);
                 } else if (!irrigationNeeded && irrigationStatus) {
                     // If irrigation is not needed and it's currently on, turn it off
-                    toggleIrrigation(false);
+                    switchIrrigation(false);
                 }
                 responseObserver.onNext(result);
             }
@@ -48,7 +49,7 @@ public class IrrigationServiceServerImpl extends IrrigationServiceGrpc.Irrigatio
     }
 
     // Method to toggle irrigation on or off
-    private void toggleIrrigation(boolean enable) {
+    private void switchIrrigation(boolean enable) {
         if (enable) {
             System.out.println("Turning on irrigation");
             irrigationStatus = true;

@@ -1,11 +1,14 @@
 import java.util.List;
+import java.util.function.Consumer;
 
 import com.ecwid.consul.v1.ConsulClient;
 import com.ecwid.consul.v1.health.model.HealthService;
 
 import Irrigation.IrrigationServiceClient;
 import SoilSensor.SoilSensorServiceClient;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.text.Text;
 
 public class SmartFarm {
 
@@ -40,22 +43,12 @@ public class SmartFarm {
         // startServer();
     }
 
-    public void irrigateField() {
-        try {
-            irrigationClient.checkIrrigation("src/main/resources/consul.properties");
-        } catch (InterruptedException e) {
-            System.err.println("Error occurred during irrigateField(): " + e.getMessage());
-        }
+    public void streamIrrigation(Text text) throws InterruptedException {
+        irrigationClient.checkIrrigation(text);
     }
 
-    public void streamSoilData(Label soilDataLabel) {
-        try {
-            soilSensorClient.streamSoilServerRequest(soilDataLabel);
-        } catch (
-
-        Exception e) {
-            System.err.println("Error occurred during streamSoilData(): " + e.getMessage());
-        }
+    public void streamSoilData(Text text) {
+        soilSensorClient.streamSoilServerRequest(text);
     }
 
     public void shutdown() {
@@ -66,12 +59,8 @@ public class SmartFarm {
         }
     }
 
-    public void getSoilData(Label soilDataLabel) {
-        try {
-            soilSensorClient.getSoilData("06:30", soilDataLabel);
-        } catch (Exception e) {
-            System.err.println("Error occurred during getSoilDate(): " + e.getMessage());
-        }
+    public void getSoilData(String time, Text text) {
+        soilSensorClient.getSoilData(time, text);
     }
 
     public static void main(String[] args) {

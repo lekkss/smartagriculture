@@ -94,6 +94,7 @@ public class WeatherSensorServer {
     public static void main(String[] args) throws IOException, InterruptedException {
         WeatherSensorServer server = new WeatherSensorServer();
         server.start(5003);
+
         server.blockUntilShutdown();
     }
 }

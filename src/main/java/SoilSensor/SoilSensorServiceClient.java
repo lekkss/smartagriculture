@@ -2,6 +2,7 @@ package SoilSensor;
 
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Consumer;
 
 import com.lekkss.soilsensor.soilsensorservice.GetSoilDataRequest;
 import com.lekkss.soilsensor.soilsensorservice.SoilData;
@@ -13,6 +14,7 @@ import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
 import javafx.application.Platform;
 import javafx.scene.control.Label;
+import javafx.scene.text.Text;
 
 public class SoilSensorServiceClient {
     private final ManagedChannel channel;
@@ -23,21 +25,16 @@ public class SoilSensorServiceClient {
         this.stub = SoilSensorServiceGrpc.newStub(channel);
     }
 
-    public void getSoilData(String time, Label soilDataLabel) {
-
+    public void getSoilData(String time, Text text) {
         GetSoilDataRequest soilDataRequest = GetSoilDataRequest.newBuilder().setTime(time).build();
         stub.getSoilData(soilDataRequest, new StreamObserver<SoilData>() {
-
             @Override
             public void onNext(SoilData responseData) {
-                Platform.runLater(() -> {
-                    soilDataLabel.setText("---------SoilData at: " + time + " ---------\n" +
-                            "Temperature(°C) " + responseData.getTemperature() + "\n" +
-                            "Humidity " + responseData.getSoilHumidity() + "\n" +
-                            "Soil Nutrient " + responseData.getSoilNutrients());
-                });
+                Platform.runLater(() -> text.setText("Soil Data at time = " + time + "\n" +
+                        "Temperature: " + responseData.getTemperature() + "\n" +
+                        "Humidity: " + responseData.getSoilHumidity() + "\n" +
+                        "Soil Nutrient: " + responseData.getSoilNutrients()));
             }
-
             @Override
             public void onError(Throwable t) {
                 Platform.runLater(() -> {
@@ -47,98 +44,36 @@ public class SoilSensorServiceClient {
 
             @Override
             public void onCompleted() {
-                Platform.runLater(() -> {
-                    System.out.println("---------Soil Sensor Data Sent Successfully---------");
-                });
+                // Handle completion if needed
             }
         });
     }
-    // public void getSoilData(String time) {
-    // GetSoilDataRequest soilDataRequest =
-    // GetSoilDataRequest.newBuilder().setTime(time).build();
-    // stub.getSoilData(soilDataRequest, new StreamObserver<SoilData>() {
 
-    // @Override
-    // public void onNext(SoilData responseData) {
-    // System.out.println("---------SoilData at: " + time + " ---------" +
-    // "\nTemperature(°C) " + responseData.getTemperature() +
-    // "\nHumidiy " + responseData.getSoilHumidity() +
-    // "\nSoil Nutrient " + responseData.getSoilNutrients());
-    // }
 
-    // @Override
-    // public void onError(Throwable t) {
-    // System.out.println("Error: " + t.getMessage());
-    // }
-
-    // @Override
-    // public void onCompleted() {
-    // System.out.println("---------Soil Sensor Data Sent Successfully---------");
-    // }
-
-    // });
-    // }
-
-    public void streamSoilServerRequest(Label soilDataLabel) {
-
+    public void streamSoilServerRequest(Text text) {
+        // Create a StreamObserver to handle streamed data
         StreamObserver<SoilData> responseObserver = new StreamObserver<SoilData>() {
             @Override
             public void onNext(SoilData soilData) {
-                Platform.runLater(() -> {
-                    soilDataLabel.setText("---------Soil data received---------\n" +
-                            "Time of Day: " + soilData.getTimeOfDay() + "\n" +
-                            "Temperature(°C): " + soilData.getTemperature() + "\n" +
-                            "Humidity: " + soilData.getSoilHumidity() + "\n" +
-                            "Soil Nutrient: " + soilData.getSoilNutrients());
-                });
+                Platform.runLater(() -> text.setText("Soil Data at:  " + soilData.getTimeOfDay() + "\n" +
+                        "\"Temperature(°C) \": " + soilData.getTemperature() + "\n" +
+                        "Humidity: " + soilData.getSoilHumidity() + "\n" +
+                        "Soil Nutrient: " + soilData.getSoilNutrients()));
             }
-
             @Override
             public void onError(Throwable throwable) {
-                Platform.runLater(() -> {
-                    System.out.println("Error: " + throwable.getMessage());
-                });
+                // Handle error if needed
+                Platform.runLater(() -> System.out.println("Error: " + throwable.getMessage()));
             }
-
             @Override
             public void onCompleted() {
-                Platform.runLater(() -> {
-                    System.out.println("---------Soil Sensor Service Streaming completed---------");
-                });
+                // Handle completion if needed
             }
         };
-
         stub.streamSoilData(StreamSoilDataRequest.newBuilder().build(), responseObserver);
     }
 
-    // public void streamSoilServerRequest() {
-    // StreamObserver<SoilData> responseObserver = new StreamObserver<SoilData>() {
-    // @Override
-    // public void onNext(SoilData soilData) {
-    // // Process incoming soil sensor data
-    // System.out.println("---------Soil data received---------" +
-    // "\nTime of Day: " + soilData.getTimeOfDay() +
-    // "\nTemperature(°C): " + soilData.getTemperature() +
-    // "\nHumidiy: " + soilData.getSoilHumidity() +
-    // "\nSoil Nutrient: " + soilData.getSoilNutrients());
-    // }
 
-    // @Override
-    // public void onError(Throwable throwable) {
-    // // Handle error
-    // System.out.println("Error: " + throwable.getMessage());
-    // }
-
-    // @Override
-    // public void onCompleted() {
-    // // Stream completed
-    // System.out.println("---------Soil Sensor Service Streaming
-    // completed---------");
-    // }
-    // };
-    // stub.streamSoilData(StreamSoilDataRequest.newBuilder().build(),
-    // responseObserver);
-    // }
 
     public void shutdown() {
         try {
