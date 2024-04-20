@@ -4,42 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c528591c-78fb-4da4-aa73-de3e658dbaaf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NewFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NewFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SmartFarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SmartFarm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SmartFarmController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SoilSensor/soil_sensor_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SoilSensor/soil_sensor_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/consul.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/consul.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/newFile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/newFile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServerImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServerImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NewFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NewFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SmartFarm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartFarm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SmartFarmController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/soil_sensor_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/weather_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/consul.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/consul.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/newFile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/newFile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-    </list>
+    <list default="true" id="c528591c-78fb-4da4-aa73-de3e658dbaaf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

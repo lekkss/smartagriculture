@@ -1,7 +1,6 @@
 import Irrigation.IrrigationServiceServer;
 import SoilSensor.SoilSensorServiceServer;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -68,10 +67,10 @@ public class NewFile extends Application {
         irrigationServiceServer.start(5001);
     }
 
-    public void stopIrrigationServerAction(ActionEvent actionEvent) {
+    public void stopIrrigationServerAction() {
     }
 
-    public void startIrrigationSensorAction(ActionEvent actionEvent) {
+    public void startIrrigationSensorAction() {
         Text irrigationMessage = new Text();
         smartFarm.streamIrrigation(irrigationMessage, sensorLight);
 
