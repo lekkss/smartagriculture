@@ -4,8 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c528591c-78fb-4da4-aa73-de3e658dbaaf" name="Changes" comment="gui">
+    <list default="true" id="c528591c-78fb-4da4-aa73-de3e658dbaaf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NewFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NewFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SmartFarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SmartFarm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SmartFarmController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SoilSensor/soil_sensor_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SoilSensor/soil_sensor_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/consul.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/consul.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/newFile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/newFile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServerImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServerImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NewFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NewFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SmartFarm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartFarm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SmartFarmController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/soil_sensor_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/weather_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/consul.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/consul.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/newFile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/newFile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,34 +57,48 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "lekkss"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/lekkss/smartagriculture.git",
+    "accountId": "c12cac0d-84e7-4295-95af-1c4ed7693575"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2fEzn2vkNM5NQyRDwdf2evK8y4A" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lekkss/AppData/Local/SceneBuilder/SceneBuilder.exe&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.34827587&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.NewFile.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/lekkss/AppData/Local/SceneBuilder/SceneBuilder.exe",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.34827587",
+    "settings.editor.selected.configurable": "preferences.JavaFX"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.NewFile">
     <configuration name="NewFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NewFile" />
       <module name="smartagriculture" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\javafx-sdk-22\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;$USER_HOME$/Downloads/javafx-sdk-22.0.1/lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,6 +146,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gui" />

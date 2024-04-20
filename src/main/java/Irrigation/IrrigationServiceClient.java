@@ -6,10 +6,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
+import javafx.application.Platform;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
@@ -31,8 +36,8 @@ public class IrrigationServiceClient {
         this.stub = IrrigationServiceGrpc.newStub(channel);
     }
 
-    public void checkIrrigation(Text text) throws InterruptedException {
-        try (InputStream input = new FileInputStream(CSV_FILE_PATH);
+    public void checkIrrigation(Text text, Circle sensorLight) {
+        try (InputStream input = Files.newInputStream(Paths.get(CSV_FILE_PATH));
              Reader reader = new InputStreamReader(input);
              CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader())) {
 
@@ -41,17 +46,26 @@ public class IrrigationServiceClient {
                     .checkIrrigationNeeded(new StreamObserver<IrrigationResult>() {
                         @Override
                         public void onNext(IrrigationResult irrigationResult) {
-                            text.setText("HERE");
+                            // Update the text with the irrigation status for each streamed value
+                            Platform.runLater(() -> {
+                                text.setText(irrigationResult.getIrrigationNeeded() ? "irrigate" : "turn off");
+                                // Change color of sensorLight based on response
+                                sensorLight.setFill(irrigationResult.getIrrigationNeeded() ? Color.GREEN : Color.RED);
+                            });
                         }
 
                         @Override
                         public void onError(Throwable throwable) {
-                            System.out.println("Error: " + throwable.getMessage());
+                            // Handle error
+                            Platform.runLater(() ->
+                                    System.out.println("Error: " + throwable.getMessage()));
                         }
 
                         @Override
                         public void onCompleted() {
-                            System.out.println("Stream Irrigation completed");
+                            // Handle stream completion
+                            Platform.runLater(() ->
+                                    System.out.println("Stream Irrigation completed"));
                         }
                     });
 
@@ -76,7 +90,7 @@ public class IrrigationServiceClient {
 
             // Indicate that all data has been sent
             requestObserver.onCompleted();
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
     }

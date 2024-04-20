@@ -93,7 +93,7 @@ public class SoilSensorServiceServer {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         SoilSensorServiceServer server = new SoilSensorServiceServer();
-        server.start(5000);
+        server.start(5003);
         server.blockUntilShutdown();
     }
 }

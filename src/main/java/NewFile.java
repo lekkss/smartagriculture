@@ -1,24 +1,21 @@
 import Irrigation.IrrigationServiceServer;
 import SoilSensor.SoilSensorServiceServer;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextInputDialog;
-import javafx.scene.control.ToggleButton;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
-import javax.swing.*;
-import java.awt.*;
 import java.io.IOException;
 import java.util.Optional;
 
 public class NewFile extends Application {
+    public Circle sensorLight;
     SmartFarm smartFarm = new SmartFarm();
     IrrigationServiceServer irrigationServiceServer = new IrrigationServiceServer();
     public Button startIrrigationSensorButton;
@@ -37,7 +34,7 @@ public class NewFile extends Application {
     public void startAction() {
         SoilSensorServiceServer myServer = new SoilSensorServiceServer();
         try {
-            myServer.start(5000);
+            myServer.start(5003);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -74,15 +71,12 @@ public class NewFile extends Application {
     public void stopIrrigationServerAction(ActionEvent actionEvent) {
     }
 
-    public void startIrrigationSensorAction(ActionEvent actionEvent) throws InterruptedException {
-        // Clear any existing text in the irrigationData
-        irrigationData.getChildren().clear();
-
-       Text res = new Text();
-       smartFarm.streamIrrigation(res);
+    public void startIrrigationSensorAction(ActionEvent actionEvent) {
+        Text irrigationMessage = new Text();
+        smartFarm.streamIrrigation(irrigationMessage, sensorLight);
 
         irrigationData.getChildren().clear();
-        irrigationData.getChildren().add(res);
+        irrigationData.getChildren().add(irrigationMessage);
     }
 
 

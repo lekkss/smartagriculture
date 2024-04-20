@@ -6,8 +6,10 @@ import com.ecwid.consul.v1.health.model.HealthService;
 
 import Irrigation.IrrigationServiceClient;
 import SoilSensor.SoilSensorServiceClient;
+import javafx.concurrent.Task;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 
 public class SmartFarm {
@@ -43,8 +45,18 @@ public class SmartFarm {
         // startServer();
     }
 
-    public void streamIrrigation(Text text) throws InterruptedException {
-        irrigationClient.checkIrrigation(text);
+    public void streamIrrigation(Text text,Circle circle) {
+        Task<Void> task = new Task<Void>() {
+            @Override
+            protected Void call() throws Exception {
+                irrigationClient.checkIrrigation(text, circle);
+                return null;
+            }
+        };
+
+        Thread thread = new Thread(task);
+        thread.setDaemon(true); // Mark the thread as a daemon so it automatically terminates when the application exits
+        thread.start();
     }
 
     public void streamSoilData(Text text) {
