@@ -25,7 +25,7 @@ public class SoilSensorServiceServer {
 
         // Add shutdown hook
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.out.println("Shutting down Soil Sensor Server");
+            System.out.println("Shutting down Soil Sensor Server.");
             try {
                 SoilSensorServiceServer.this.stop();
             } catch (InterruptedException e) {
