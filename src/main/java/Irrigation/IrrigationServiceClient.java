@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
 import javafx.application.Platform;
+import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
@@ -36,7 +37,39 @@ public class IrrigationServiceClient {
         this.stub = IrrigationServiceGrpc.newStub(channel);
     }
 
-    public void checkIrrigation(Text text, Circle sensorLight) {
+    public void toggleIrrigation(Label text, Circle sensorLight, boolean enable) {
+        ToggleIrrigationRequest request = ToggleIrrigationRequest.newBuilder()
+                .setEnableIrrigation(enable)
+                .build();
+
+        stub.toggleIrrigation(request, new StreamObserver<ToggleIrrigationResponse>() {
+            @Override
+            public void onNext(ToggleIrrigationResponse response) {
+                Platform.runLater(() -> {
+                    text.setText(response.getSuccess() ? "Turning sensor on" : "Turning sensors off");
+                    sensorLight.setFill(enable ? Color.GREEN : Color.RED);
+                });
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                Platform.runLater(() -> {
+                    System.out.println("Error: " + throwable.getMessage());
+                    text.setText(throwable.getMessage());
+                });
+            }
+
+            @Override
+            public void onCompleted() {
+
+            }
+        });
+
+
+    }
+
+
+    public void checkIrrigation(Label text, Circle sensorLight) {
         try (InputStream input = Files.newInputStream(Paths.get(CSV_FILE_PATH));
              Reader reader = new InputStreamReader(input);
              CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader())) {
@@ -48,7 +81,7 @@ public class IrrigationServiceClient {
                         public void onNext(IrrigationResult irrigationResult) {
                             // Update the text with the irrigation status for each streamed value
                             Platform.runLater(() -> {
-                                text.setText(irrigationResult.getIrrigationNeeded() ? "irrigate" : "turn off");
+                                text.setText(irrigationResult.getIrrigationNeeded() ? "turning sensor on" : "turning sensors off");
                                 // Change color of sensorLight based on response
                                 sensorLight.setFill(irrigationResult.getIrrigationNeeded() ? Color.GREEN : Color.RED);
                             });

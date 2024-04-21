@@ -4,7 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c528591c-78fb-4da4-aa73-de3e658dbaaf" name="Changes" comment="" />
+    <list default="true" id="c528591c-78fb-4da4-aa73-de3e658dbaaf" name="Changes" comment="updated fx">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Irrigation/IrrigationServiceServerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NewFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SmartFarm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SoilSensor/soil_sensor_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SoilSensor/soil_sensor_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WeatherSensor/WeatherSensorClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeatherSensor/WeatherSensorClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WeatherSensor/WeatherSensorServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeatherSensor/WeatherSensorServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/newFile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Irrigation/IrrigationServiceServerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NewFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SmartFarm$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SmartFarm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/newFile.fxml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaFXApplication" />
         <option value="FxmlFile" />
+        <option value="JavaFXApplication" />
         <option value="Class" />
       </list>
     </option>
@@ -22,18 +51,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "lekkss"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;lekkss&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/lekkss/smartagriculture.git",
-    "accountId": "c12cac0d-84e7-4295-95af-1c4ed7693575"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/lekkss/smartagriculture.git&quot;,
+    &quot;accountId&quot;: &quot;c12cac0d-84e7-4295-95af-1c4ed7693575&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -47,19 +76,36 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Launcher.executor": "Run",
     "Application.NewFile.executor": "Run",
+    "Application.WeatherSensorClient.executor": "Run",
+    "Application.WeatherSensorServer.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lekkss/AppData/Local/SceneBuilder/SceneBuilder.exe",
+    "last_opened_file_path": "/Users/lekkss/Documents/smartagriculture/src/main/resources",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.34827587",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.NewFile">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/images" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Launcher">
+    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Launcher" />
+      <module name="smartagriculture" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;$USER_HOME$/Downloads/javafx-sdk-22.0.1/lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NewFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NewFile" />
       <module name="smartagriculture" />
@@ -81,12 +127,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WeatherSensorClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WeatherSensor.WeatherSensorClient" />
+      <module name="smartagriculture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="WeatherSensor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeatherSensorServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WeatherSensor.WeatherSensorServer" />
+      <module name="smartagriculture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="WeatherSensor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.WeatherSensorClient" />
+      <item itemvalue="Application.WeatherSensorServer" />
+      <item itemvalue="Application.Launcher" />
       <item itemvalue="Application.SoilSensorServiceServer" />
       <item itemvalue="Application.NewFile" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Launcher" />
+        <item itemvalue="Application.WeatherSensorClient" />
+        <item itemvalue="Application.WeatherSensorServer" />
         <item itemvalue="Application.NewFile" />
         <item itemvalue="Application.SoilSensorServiceServer" />
       </list>
@@ -109,15 +187,35 @@
       <option name="project" value="LOCAL" />
       <updated>1713599336049</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated fx">
+      <option name="closed" value="true" />
+      <created>1713605121294</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713605121294</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gui" />
-    <option name="LAST_COMMIT_MESSAGE" value="gui" />
+    <MESSAGE value="updated fx" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated fx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

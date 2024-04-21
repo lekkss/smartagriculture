@@ -18,7 +18,7 @@ public class SoilSensorServiceServer {
 
     public void start(int port) throws IOException {
         server = ServerBuilder.forPort(port).addService(new SoilSensorServiceImpl()).build().start();
-        System.out.println("Server started, lisening on port " + port);
+        System.out.println("SoilSensor Server started, listening on port " + port);
 
         // register consul
         registerToConsul();
@@ -47,7 +47,7 @@ public class SoilSensorServiceServer {
     }
 
     private void registerToConsul() {
-        System.out.println("Registering soli sensnor server to Consul...");
+        System.out.println("Registering soil sensor server to Consul...");
 
         // Load Consul configuration from consul.properties file
         Properties props = new Properties();

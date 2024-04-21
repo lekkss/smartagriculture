@@ -48,6 +48,15 @@ public class IrrigationServiceServerImpl extends IrrigationServiceGrpc.Irrigatio
         };
     }
 
+    @Override
+    public void toggleIrrigation(ToggleIrrigationRequest request, StreamObserver<ToggleIrrigationResponse> responseObserver) {
+        boolean enableIrrigation = request.getEnableIrrigation();
+        ToggleIrrigationResponse response = ToggleIrrigationResponse.newBuilder()
+                .setSuccess(enableIrrigation)
+                .build();
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
     // Method to toggle irrigation on or off
     private void switchIrrigation(boolean enable) {
         if (enable) {

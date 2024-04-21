@@ -18,7 +18,7 @@ public class WeatherSensorServer {
 
     public void start(int port) throws IOException {
         server = ServerBuilder.forPort(port).addService(new WeatherSensorImpl()).build().start();
-        System.out.println("Server started. Listening on port: " + port);
+        System.out.println("Weather Server started. Listening on port: " + port);
 
         // register consul
         registerToConsul();
@@ -47,7 +47,7 @@ public class WeatherSensorServer {
     }
 
     private void registerToConsul() {
-        System.out.println("Registering weather sensnor server to Consul...");
+        System.out.println("Registering weather sensor server to Consul...");
 
         // Load Consul configuration from consul.properties file
         Properties props = new Properties();
@@ -93,7 +93,7 @@ public class WeatherSensorServer {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         WeatherSensorServer server = new WeatherSensorServer();
-        server.start(5003);
+        server.start(5002);
 
         server.blockUntilShutdown();
     }
