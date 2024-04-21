@@ -69,17 +69,19 @@
       <ToggleButton fx:id="startWeatherSensorButton" layoutX="174.0" layoutY="279.0" mnemonicParsing="false" onAction="#startWeatherSensorAction" style="-fx-background-color: green;" text="Start" textFill="WHITE" />
       <Label layoutX="17.0" layoutY="343.0" text="Get Weather Information" />
       <ChoiceBox fx:id="setCordinate" layoutX="16.0" layoutY="380.0" prefWidth="150.0" />
-      <Label layoutX="17.0" layoutY="418.0" text="Longitude" />
-      <Label layoutX="19.0" layoutY="445.0" text="Latitude" />
-      <Label layoutX="17.0" layoutY="473.0" text="Temperature" />
-      <Label layoutX="17.0" layoutY="502.0" text="Humidity" />
-      <Label layoutX="17.0" layoutY="533.0" text="Wind Direction" />
-      <Label layoutX="17.0" layoutY="563.0" text="Precipitation" />
+      <Label layoutX="18.0" layoutY="418.0" text="Longitude --" />
+      <Label layoutX="19.0" layoutY="445.0" text="Latitude --" />
+      <Label layoutX="17.0" layoutY="473.0" text="Temperature --" />
+      <Label layoutX="17.0" layoutY="502.0" text="Humidity --" />
+      <Label layoutX="17.0" layoutY="533.0" text="Wind Direction --" />
+      <Label layoutX="17.0" layoutY="563.0" text="Precipitation --" />
       <Label fx:id="latitudeData" layoutX="114.0" layoutY="445.0" />
       <Label fx:id="humidityData" layoutX="113.0" layoutY="502.0" />
       <Label fx:id="windData" layoutX="114.0" layoutY="533.0" />
       <Label fx:id="presipData" layoutX="114.0" layoutY="563.0" />
       <Label fx:id="tempData" layoutX="114.0" layoutY="473.0" />
       <Label fx:id="longitudeData" layoutX="113.0" layoutY="418.0" />
+      <Button fx:id="getAvgWeatherButton" layoutX="191.0" layoutY="378.0" mnemonicParsing="false" onAction="#getAvgWeatherAction" text="Get Average Weather Information" />
+      <Label fx:id="progress" layoutX="220.0" layoutY="418.0" />
    </children>
 </AnchorPane>

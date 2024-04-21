@@ -63,11 +63,30 @@ public class WeatherSensorImpl extends WeatherSensorServiceGrpc.WeatherSensorSer
     public StreamObserver<LocationCoordinates> getAverageWeatherForcast(StreamObserver<WeatherData> responseObserver) {
         return new StreamObserver<LocationCoordinates>() {
 
-            List<LocationCoordinates> locationList = new ArrayList<>();
+            private final List<LocationCoordinates> locationList = new ArrayList<>();
+            private double totalTemperature = 0.0;
+            private double totalHumidity = 0.0;
+            private double totalWindSpeed = 0.0;
+            private double totalPrecipitation = 0.0;
 
             @Override
             public void onNext(LocationCoordinates locationCoordinates) {
                 locationList.add(locationCoordinates);
+                System.out.println("Received location: Latitude = " + locationCoordinates.getLatitude()
+                        + ", Longitude = " + locationCoordinates.getLongitude());
+
+                // Simulated data fetch based on coordinates
+                WeatherData data = null;
+                try {
+                    data = findWeatherData(locationCoordinates.getLatitude(), locationCoordinates.getLongitude() );
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+                assert data != null;
+                totalTemperature += data.getTemperature();
+                totalHumidity += data.getHumidity();
+                totalWindSpeed += data.getWindSpeed();
+                totalPrecipitation += data.getPrecipitation();
             }
 
             @Override
@@ -77,34 +96,29 @@ public class WeatherSensorImpl extends WeatherSensorServiceGrpc.WeatherSensorSer
 
             @Override
             public void onCompleted() {
-                double totalTemperature = 0.0;
-                double totalHumidity = 0.0;
-                double totalWindSpeed = 0.0;
-                double totalPrecipitation = 0.0;
+                if (!locationList.isEmpty()) {
+                    // Calculate average values
+                    double averageTemperature = totalTemperature / locationList.size();
+                    double averageHumidity = totalHumidity / locationList.size();
+                    double averageWindSpeed = totalWindSpeed / locationList.size();
+                    double averagePrecipitation = totalPrecipitation / locationList.size();
 
-                for (LocationCoordinates location : locationList) {
+                    WeatherData avgWeatherData = WeatherData.newBuilder()
+                            .setTemperature(averageTemperature)
+                            .setHumidity(averageHumidity)
+                            .setWindSpeed(averageWindSpeed)
+                            .setPrecipitation(averagePrecipitation)
+                            .build();
 
-                    totalTemperature += 25.0;
-                    totalHumidity += 0.6;
-                    totalWindSpeed += 10.0;
-                    totalPrecipitation += 0.1;
+                    responseObserver.onNext(avgWeatherData);
+                    responseObserver.onCompleted();
+                } else {
+                    responseObserver.onError(new IllegalStateException("No locations received"));
                 }
-
-                // Calculate average values
-                double averageTemperature = totalTemperature / locationList.size();
-                double averageHumidity = totalHumidity / locationList.size();
-                double averageWindSpeed = totalWindSpeed / locationList.size();
-                double averagePrecipitation = totalPrecipitation / locationList.size();
-
-                WeatherData avgWeatherData = WeatherData.newBuilder().setTemperature(averageTemperature)
-                        .setHumidity(averageHumidity).setPrecipitation(averagePrecipitation)
-                        .setWindSpeed(averageWindSpeed).build();
-
-                responseObserver.onNext(avgWeatherData);
-                responseObserver.onCompleted();
-
             }
         };
     }
+
+
 
 }

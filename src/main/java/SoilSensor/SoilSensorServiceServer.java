@@ -17,28 +17,22 @@ public class SoilSensorServiceServer {
     private Server server;
 
     public void start(int port) throws IOException {
-        server = ServerBuilder.forPort(port).addService(new SoilSensorServiceImpl()).build().start();
-        System.out.println("SoilSensor Server started, listening on port " + port);
-
-        // register consul
+        server = ServerBuilder.forPort(port)
+                .addService(new SoilSensorServiceImpl())
+                .build()
+                .start();
+        System.out.println("Server started, listening on " + port);
         registerToConsul();
-
-        // Add shutdown hook
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.out.println("Shutting down Soil Sensor Server.");
-            try {
-                SoilSensorServiceServer.this.stop();
-            } catch (InterruptedException e) {
-                e.printStackTrace(System.err);
-            }
-        }));
     }
 
-    private void stop() throws InterruptedException {
+    public void stop() throws InterruptedException {
         if (server != null) {
             server.shutdown().awaitTermination(30, TimeUnit.SECONDS);
+            System.out.println("Server stopped.");
         }
     }
+
+
 
     public void blockUntilShutdown() throws InterruptedException {
         if (server != null) {

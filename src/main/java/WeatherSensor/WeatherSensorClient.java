@@ -58,8 +58,9 @@ public class WeatherSensorClient {
         });
     }
 
-    public void getAverageWeatherForecast() throws InterruptedException {
+    public void getAverageWeatherForecast(Label progress,Label temperature, Label humidity, Label wind, Label pres) throws InterruptedException {
         try (InputStream input = Files.newInputStream(Paths.get(CSV_FILE_PATH));
+
              Reader reader = new InputStreamReader(input);
              CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader())) {
             StreamObserver<WeatherData> responseObserver = new StreamObserver<WeatherData>() {
@@ -70,6 +71,12 @@ public class WeatherSensorClient {
                     System.out.println("Humidity: " + weatherData.getHumidity());
                     System.out.println("Wind Speed: " + weatherData.getWindSpeed() + " m/s");
                     System.out.println("Precipitation: " + weatherData.getPrecipitation());
+                    Platform.runLater(()-> {
+                        temperature.setText(String.valueOf(weatherData.getTemperature()));
+                        humidity.setText(String.valueOf(weatherData.getHumidity()));
+                        wind.setText(String.valueOf(weatherData.getWindSpeed()));
+                        pres.setText(String.valueOf(weatherData.getPrecipitation()));
+                    });
                 }
 
                 @Override
@@ -79,8 +86,7 @@ public class WeatherSensorClient {
 
                 @Override
                 public void onCompleted() {
-                    System.out.println("Weather Forecast stream completed");
-                    channel.shutdown();
+                    Platform.runLater(()-> progress.setText("Completed"));
                 }
             };
 
@@ -113,37 +119,34 @@ public class WeatherSensorClient {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException {
-        WeatherSensorClient client = new WeatherSensorClient("localhost", 5002);
-
-//        client.getWeatherForecast(51.5074, -0.1278);
-
-        // client.getAverageWeatherForecast();
-        // Start streaming client information
-        Thread streamThread = new Thread(() -> {
-
-            System.out.println("HERE");
-            try {
-                client.getAverageWeatherForecast();
-            } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-
-        });
-        streamThread.start();
-
-        // Wait for user input to stop streaming
-        System.out.println("Press 'Q' to stop streaming client information");
-
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            String input = scanner.nextLine();
-            if (input.equalsIgnoreCase("Q")) {
-                streamThread.interrupt();
-                break;
-            }
-        }
-        client.shutdown();
-    }
+//    public static void main(String[] args) throws InterruptedException {
+//        WeatherSensorClient client = new WeatherSensorClient("localhost", 5002);
+//
+//
+//        Thread streamThread = new Thread(() -> {
+//
+//            System.out.println("HERE");
+//            try {
+//                client.getAverageWeatherForecast();
+//            } catch (InterruptedException e) {
+//                // TODO Auto-generated catch block
+//                e.printStackTrace();
+//            }
+//
+//        });
+//        streamThread.start();
+//
+//        // Wait for user input to stop streaming
+//        System.out.println("Press 'Q' to stop streaming client information");
+//
+//        Scanner scanner = new Scanner(System.in);
+//        while (true) {
+//            String input = scanner.nextLine();
+//            if (input.equalsIgnoreCase("Q")) {
+//                streamThread.interrupt();
+//                break;
+//            }
+//        }
+//        client.shutdown();
+//    }
 }

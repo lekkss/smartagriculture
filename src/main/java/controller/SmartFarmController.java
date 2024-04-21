@@ -17,8 +17,6 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 import java.io.BufferedReader;
@@ -54,6 +52,8 @@ public class SmartFarmController implements ChartUpdater {
     public Label presipData;
     public Label tempData;
     public Label longitudeData;
+    public Button getAvgWeatherButton;
+    public Label progress;
 
     IrrigationServiceClient irrigationClient;
     SoilSensorServiceClient soilSensorClient;
@@ -141,14 +141,24 @@ public class SmartFarmController implements ChartUpdater {
         });
     }
 
+    public void stopServerAction() {
+        SoilSensorServiceServer soilServer = new SoilSensorServiceServer();
+        try {
+            soilServer.stop();
+        } catch (InterruptedException e) {
+            System.err.println("Failed to stop the server: " + e.getMessage());
+        }
+    }
 
-    public void startSoilServerAction(ActionEvent actionEvent) throws IOException {
+
+    public void startSoilServerAction(ActionEvent actionEvent) throws IOException, InterruptedException {
+        SoilSensorServiceServer soilSensorServiceServer = new SoilSensorServiceServer();
         if (startSoilServer.isSelected()) {
-            SoilSensorServiceServer soilSensorServiceServer = new SoilSensorServiceServer();
             soilSensorServiceServer.start(5003);
             startSoilServer.setText("Stop");
             startSoilServer.setStyle("-fx-background-color: red;");
         } else {
+            stopServerAction();
             startSoilServer.setText("Start");
             startSoilServer.setStyle("-fx-background-color: green;");
         }
@@ -244,7 +254,7 @@ public class SmartFarmController implements ChartUpdater {
     }
 
     //WEATHER
-    public void startWeatherSensorAction(ActionEvent actionEvent) throws IOException {
+    public void startWeatherSensorAction() throws IOException {
         if (startWeatherSensorButton.isSelected()) {
             WeatherSensorServer weatherSensorServer = new WeatherSensorServer();
             weatherSensorServer.start(5002);
@@ -257,4 +267,7 @@ public class SmartFarmController implements ChartUpdater {
         }
     }
 
+    public void getAvgWeatherAction() throws InterruptedException {
+        weatherSensorClient.getAverageWeatherForecast(progress,tempData,humidityData,windData,presipData);
+    }
 }
