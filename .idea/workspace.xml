@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c528591c-78fb-4da4-aa73-de3e658dbaaf" name="Changes" comment="updated server">
+    <list default="true" id="c528591c-78fb-4da4-aa73-de3e658dbaaf" name="Changes" comment="added weather sensor gui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SoilSensor/SoilSensorServiceServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WeatherSensor/WeatherSensorClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeatherSensor/WeatherSensorClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WeatherSensor/WeatherSensorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeatherSensor/WeatherSensorImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/SmartFarmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SmartFarmController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SmartFarm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SmartFarm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SmartFarm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartFarm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SoilSensor/SoilSensorServiceServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/SmartFarmController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/SmartFarmController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherSensor/WeatherSensorImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/SmartFarmController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/SmartFarmController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,10 +62,16 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/lekkss/Documents/smartagriculture/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.34827587",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -154,6 +153,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -162,6 +169,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713381191412</updated>
+      <workItem from="1713984291165" duration="818000" />
     </task>
     <task id="LOCAL-00001" summary="gui">
       <option name="closed" value="true" />
@@ -187,8 +195,19 @@
       <option name="project" value="LOCAL" />
       <updated>1713708398885</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added weather sensor gui">
+      <option name="closed" value="true" />
+      <created>1713723035242</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713723035242</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
@@ -208,7 +227,8 @@
     <MESSAGE value="gui" />
     <MESSAGE value="updated fx" />
     <MESSAGE value="updated server" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated server" />
+    <MESSAGE value="added weather sensor gui" />
+    <option name="LAST_COMMIT_MESSAGE" value="added weather sensor gui" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

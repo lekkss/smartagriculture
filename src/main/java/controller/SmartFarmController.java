@@ -41,7 +41,6 @@ public class SmartFarmController implements ChartUpdater {
     public Button monitorIrrigationButton;
     public Circle irrigationSensor;
     public Label irrigationLabel;
-
     public LineChart<Number, Number> lineChart;
     public XYChart.Series<Number, Number> series = new XYChart.Series<>();
     public ToggleButton startWeatherSensorButton;
