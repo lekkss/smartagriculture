@@ -9,7 +9,7 @@ smartagriculture
 │   └── main
 │       └── java
 │           └── com.lekkss
-│               ├── controller      # Controllers for handling HTTP requests
+│               ├── controller      # Controllers for handling GRPC requests
 │               ├── Irrigation
 │               │   ├── IrrigationServiceClient.java     # Client for the irrigation service
 │               │   ├── IrrigationServiceServer.java     # Server for the irrigation service

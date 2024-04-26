@@ -64,10 +64,9 @@ public class SmartFarmController implements ChartUpdater {
     @FXML
     public void initialize() {
         loadCoordinates();
-        // Add a listener to the ChoiceBox to handle selection changes
         setCordinate.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
-                // Cast the selected item back to Coordinate (ensure your ChoiceBox is generically typed if using FXML)
+
                 Coordinate selectedCoordinate = (Coordinate) newVal;
                 double latitude = selectedCoordinate.getLatitude();
                 double longitude = selectedCoordinate.getLongitude();
@@ -150,7 +149,7 @@ public class SmartFarmController implements ChartUpdater {
     }
 
 
-    public void startSoilServerAction(ActionEvent actionEvent) throws IOException, InterruptedException {
+    public void startSoilServerAction(ActionEvent actionEvent) throws IOException {
         SoilSensorServiceServer soilSensorServiceServer = new SoilSensorServiceServer();
         if (startSoilServer.isSelected()) {
             soilSensorServiceServer.start(5003);

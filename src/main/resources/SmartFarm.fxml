@@ -14,46 +14,46 @@
 
 <AnchorPane prefHeight="640.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SmartFarmController">
    <children>
-      <Label layoutX="14.0" layoutY="22.0" text="SoilSensor" textFill="#081957">
+      <Label layoutX="14.0" layoutY="42.0" text="SoilSensor" textFill="#081957">
          <font>
             <Font name="Apple Color Emoji" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="62.0" text="TIME:" />
-      <ImageView fx:id="timeIcon" fitHeight="30.0" fitWidth="32.0" layoutX="51.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+      <Label layoutX="14.0" layoutY="82.0" text="TIME:" />
+      <ImageView fx:id="timeIcon" fitHeight="30.0" fitWidth="32.0" layoutX="51.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/morning.png" />
          </image>
       </ImageView>
-      <Label layoutX="13.0" layoutY="98.0" text="TEMPERATURE: " />
-      <ImageView fx:id="tempIcon" fitHeight="36.0" fitWidth="40.0" layoutX="109.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+      <Label layoutX="13.0" layoutY="118.0" text="TEMPERATURE: " />
+      <ImageView fx:id="tempIcon" fitHeight="36.0" fitWidth="40.0" layoutX="109.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/hot.png" />
          </image>
       </ImageView>
-      <Label layoutX="13.0" layoutY="134.0" text="HUMIDITY: " />
-      <ImageView fx:id="humidityIcon" fitHeight="45.0" fitWidth="49.0" layoutX="78.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+      <Label layoutX="13.0" layoutY="154.0" text="HUMIDITY: " />
+      <ImageView fx:id="humidityIcon" fitHeight="45.0" fitWidth="49.0" layoutX="78.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/high.png" />
          </image>
       </ImageView>
-      <Label fx:id="timeValue" layoutX="88.0" layoutY="62.0" />
-      <Label fx:id="tempValue" layoutX="145.0" layoutY="98.0" />
-      <Label fx:id="humidityValue" layoutX="130.0" layoutY="134.0" />
-      <ToggleButton fx:id="startSoilServer" layoutX="123.0" layoutY="25.0" mnemonicParsing="false" onAction="#startSoilServerAction" style="-fx-background-color: green;" text="Start" textFill="WHITE" />
-      <Button fx:id="getSoilData" layoutX="184.0" layoutY="26.0" mnemonicParsing="false" onAction="#getSoilDataAction" text="Get SoilData" />
-      <Button fx:id="streamSoilDataButton" layoutX="297.0" layoutY="26.0" mnemonicParsing="false" onAction="#streamSoilDataAction" text="stream soil data" />
-      <Label layoutX="15.0" layoutY="185.0" text="IrrigationSensor">
+      <Label fx:id="timeValue" layoutX="88.0" layoutY="82.0" />
+      <Label fx:id="tempValue" layoutX="145.0" layoutY="118.0" />
+      <Label fx:id="humidityValue" layoutX="130.0" layoutY="154.0" />
+      <ToggleButton fx:id="startSoilServer" layoutX="123.0" layoutY="45.0" mnemonicParsing="false" onAction="#startSoilServerAction" style="-fx-background-color: green;" text="Start" textFill="WHITE" />
+      <Button fx:id="getSoilData" layoutX="184.0" layoutY="46.0" mnemonicParsing="false" onAction="#getSoilDataAction" text="Get SoilData" />
+      <Button fx:id="streamSoilDataButton" layoutX="297.0" layoutY="46.0" mnemonicParsing="false" onAction="#streamSoilDataAction" text="stream soil data" />
+      <Label layoutX="15.0" layoutY="205.0" text="IrrigationSensor">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <ToggleButton fx:id="startIrrigationSensorButton" layoutX="174.0" layoutY="187.0" mnemonicParsing="false" onAction="#startIrrigationSensorAction" style="-fx-background-color: green;" text="Start" textFill="WHITE" />
-      <Button fx:id="monitorIrrigationButton" layoutX="235.0" layoutY="188.0" mnemonicParsing="false" onAction="#monitorIrrigationAction" text="Monitor Irrigation" />
-      <Label layoutX="21.0" layoutY="226.0" text="Status: " />
-      <Circle fx:id="irrigationSensor" fill="#b1b8bf" layoutX="88.0" layoutY="235.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label fx:id="irrigationLabel" layoutX="115.0" layoutY="227.0" text="incative" />
-      <LineChart fx:id="lineChart" layoutX="424.0" layoutY="46.0" prefHeight="334.0" prefWidth="411.0">
+      <ToggleButton fx:id="startIrrigationSensorButton" layoutX="174.0" layoutY="207.0" mnemonicParsing="false" onAction="#startIrrigationSensorAction" style="-fx-background-color: green;" text="Start" textFill="WHITE" />
+      <Button fx:id="monitorIrrigationButton" layoutX="235.0" layoutY="208.0" mnemonicParsing="false" onAction="#monitorIrrigationAction" text="Monitor Irrigation" />
+      <Label layoutX="21.0" layoutY="246.0" text="Status: " />
+      <Circle fx:id="irrigationSensor" fill="#b1b8bf" layoutX="88.0" layoutY="255.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="irrigationLabel" layoutX="115.0" layoutY="247.0" text="incative" />
+      <LineChart fx:id="lineChart" layoutX="424.0" layoutY="66.0" prefHeight="334.0" prefWidth="411.0">
          <xAxis>
             <NumberAxis label="Time Index" />
          </xAxis>
@@ -61,27 +61,32 @@
             <NumberAxis label="Temperature (°C)" />
          </yAxis>
       </LineChart>
-      <Label layoutX="15.0" layoutY="275.0" text="WeatherMonitor">
+      <Label layoutX="15.0" layoutY="295.0" text="WeatherMonitor">
          <font>
             <Font name="Apple Color Emoji" size="21.0" />
          </font>
       </Label>
-      <ToggleButton fx:id="startWeatherSensorButton" layoutX="174.0" layoutY="279.0" mnemonicParsing="false" onAction="#startWeatherSensorAction" style="-fx-background-color: green;" text="Start" textFill="WHITE" />
-      <Label layoutX="17.0" layoutY="343.0" text="Get Weather Information" />
-      <ChoiceBox fx:id="setCordinate" layoutX="16.0" layoutY="380.0" prefWidth="150.0" />
-      <Label layoutX="18.0" layoutY="418.0" text="Longitude --" />
-      <Label layoutX="19.0" layoutY="445.0" text="Latitude --" />
-      <Label layoutX="17.0" layoutY="473.0" text="Temperature --" />
-      <Label layoutX="17.0" layoutY="502.0" text="Humidity --" />
-      <Label layoutX="17.0" layoutY="533.0" text="Wind Direction --" />
-      <Label layoutX="17.0" layoutY="563.0" text="Precipitation --" />
-      <Label fx:id="latitudeData" layoutX="114.0" layoutY="445.0" />
-      <Label fx:id="humidityData" layoutX="113.0" layoutY="502.0" />
-      <Label fx:id="windData" layoutX="114.0" layoutY="533.0" />
-      <Label fx:id="presipData" layoutX="114.0" layoutY="563.0" />
-      <Label fx:id="tempData" layoutX="114.0" layoutY="473.0" />
-      <Label fx:id="longitudeData" layoutX="113.0" layoutY="418.0" />
-      <Button fx:id="getAvgWeatherButton" layoutX="191.0" layoutY="378.0" mnemonicParsing="false" onAction="#getAvgWeatherAction" text="Get Average Weather Information" />
-      <Label fx:id="progress" layoutX="220.0" layoutY="418.0" />
+      <ToggleButton fx:id="startWeatherSensorButton" layoutX="174.0" layoutY="299.0" mnemonicParsing="false" onAction="#startWeatherSensorAction" style="-fx-background-color: green;" text="Start" textFill="WHITE" />
+      <Label layoutX="17.0" layoutY="363.0" text="Get Weather Information" />
+      <ChoiceBox fx:id="setCordinate" layoutX="16.0" layoutY="400.0" prefWidth="150.0" />
+      <Label layoutX="18.0" layoutY="438.0" text="Longitude --" />
+      <Label layoutX="19.0" layoutY="465.0" text="Latitude --" />
+      <Label layoutX="17.0" layoutY="493.0" text="Temperature --" />
+      <Label layoutX="17.0" layoutY="522.0" text="Humidity --" />
+      <Label layoutX="17.0" layoutY="553.0" text="Wind Direction --" />
+      <Label layoutX="17.0" layoutY="583.0" text="Precipitation --" />
+      <Label fx:id="latitudeData" layoutX="114.0" layoutY="465.0" />
+      <Label fx:id="humidityData" layoutX="113.0" layoutY="522.0" />
+      <Label fx:id="windData" layoutX="114.0" layoutY="553.0" />
+      <Label fx:id="presipData" layoutX="114.0" layoutY="583.0" />
+      <Label fx:id="tempData" layoutX="114.0" layoutY="493.0" />
+      <Label fx:id="longitudeData" layoutX="113.0" layoutY="438.0" />
+      <Button fx:id="getAvgWeatherButton" layoutX="191.0" layoutY="398.0" mnemonicParsing="false" onAction="#getAvgWeatherAction" text="Get Average Weather Information" />
+      <Label fx:id="progress" layoutX="250.0" layoutY="438.0" />
+      <Label layoutX="353.0" layoutY="6.0" text="Smart Farm" textFill="#527519">
+         <font>
+            <Font name="Gujarati Sangam MN Bold" size="23.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
